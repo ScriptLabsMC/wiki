@@ -1,0 +1,508 @@
+/* styles.css - Estilo Minecraft  para ScriptLabs */
+
+/* ============ VARIABLES ============ */
+:root {
+    /* Paleta de colores  */
+    --mc-dark-green: #2d4a07;
+    --mc-green: #3e6a29;
+    --mc-light-green: #5d9941;
+    --mc-brown: #6b3e16;
+    --mc-dark-brown: #3d2912;
+    --mc-sand: #f0e6d2;
+    --mc-dark-gray: #0f0f0f;
+    --mc-light-gray: #e0e0e0;
+    --mc-black: #050505;
+    --mc-white: #f8f8f8;
+
+    /* Texto */
+    --text-primary: #f5f5f5;
+    --text-secondary: #dddddd;
+    --text-dark: #2a2a2a;
+
+    /* Bordes */
+    --border-mc: 4px solid var(--mc-dark-brown);
+    --border-mc-inner: 3px solid var(--mc-brown);
+
+    /* Fuentes */
+    --font-mc: 'Courier New', monospace;
+    --font-titles: 'Minecraft';
+
+    /* Espaciados */
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+
+    /* Sombras y efectos */
+    --text-shadow: 2px 2px 0 var(--mc-black);
+    --text-shadow-sm: 1px 1px 0 var(--mc-black);
+    --shadow-fade-tr: linear-gradient(to right, #5d9941, #ffffff00);
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ============ RESET Y ESTILOS BASE ============ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: var(--font-mc);
+    background-color: var(--mc-dark-gray);
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============ BLOQUES MINECRAFT ============*/
+.mc-block {
+    background-color: var(--mc-brown);
+    border: var(--border-mc);
+    border-radius: 0;
+    padding: var(--space-md);
+    position: relative;
+    margin-bottom: var(--space-md);
+    transition: all 0.3s ease;
+    box-shadow: var(--card-shadow);
+}
+
+.mc-block:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.mc-block::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    pointer-events: none;
+}
+
+/* ============ HEADER ============ */
+header {
+    padding: var(--space-xl) 0;
+    text-align: center;
+    border-bottom: var(--border-mc);
+    position: relative;
+    background-image: linear-gradient(to bottom, var(--mc-dark-brown),
+    var(--mc-brown));
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+    position: relative;
+}
+
+.img-container {
+    display: inline-block;
+    border-radius: 0;
+    padding: 5px;
+    background: var(--mc-dark-brown);
+    margin-bottom: var(--space-sm);
+    transition: transform 0.3s;
+}
+
+.img-container:hover {
+    transform: scale(1.05);
+}
+
+.img-container img {
+    display: block;
+    border: var(--border-mc-inner);
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    image-rendering: pixelated;
+}
+
+.header-title {
+    font-family: var(--font-titles);
+    font-size: 2.5rem;
+    color: var(--mc-light-gray);
+    text-shadow: var(--text-shadow);
+    margin-top: var(--space-sm);
+    letter-spacing: 1px;
+}
+
+.header-subtitle {
+    color: var(--mc-white);
+    text-shadow: var(--text-shadow-sm);
+    margin-top: var(--space-sm);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============ NAVEGACIÓN ============ */
+.main-nav {
+    background-color: var(--mc-brown);
+    padding: 10px;
+    border-bottom: var(--border-mc);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: var(--mc-white);
+    text-decoration: none;
+    padding: var(--space-sm) var(--space-md);
+    display: block;
+    background-color: var(--mc-brown);
+    margin: 0 5px;
+    border: solid 4px var(--mc-brown);
+    border-bottom: none;
+    position: relative;
+    top: 5px;
+    transition: all 0.2s;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+    background-color: var(--mc-green);
+    color: var(--mc-white);
+    text-shadow: var(--text-shadow-sm);
+    transform: translateY(-2px);
+}
+
+/* ============ LAYOUT PRINCIPAL ============ */
+.main-container {
+    max-width: 1200px;
+    margin: var(--space-lg) auto;
+    padding: 0 var(--space-md);
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: var(--space-lg);
+    flex-grow: 1;
+}
+
+/* ============ SIDEBAR ============ */
+.sidebar {
+    position: sticky;
+    top: calc(var(--space-lg) + 60px);
+    height: fit-content;
+    align-self: center;
+}
+
+.sidebar-section {
+    margin-bottom: var(--space-xl);
+}
+
+.sidebar-title {
+    font-size: 1.3rem;
+    margin-bottom: var(--space-md);
+    color: var(--mc-light-gray);
+    text-shadow: var(--text-shadow);
+    border-bottom: 2px solid var(--mc-dark-brown);
+    padding-bottom: var(--space-sm);
+    position: relative;
+}
+
+.sidebar-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 80px;
+    height: 2px;
+    background-color: var(--mc-light-green);
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) 0;
+    color: var(--mc-white);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.sidebar-link i {
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-link:hover,
+.sidebar-link:focus {
+    background: rgba(87, 242, 135, 0.08);
+    color: var(--mc-white);
+    text-shadow: 0 0 4px var(--mc-green);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0.4em;
+    transform: translateX(3px);
+    padding-left: 10px;
+}
+
+/* ============ CONTENIDO PRINCIPAL ============ */
+.content {
+    display: grid;
+    gap: var(--space-lg);
+}
+
+.section-title {
+    text-align: center;
+    padding: var(--space-sm);
+    font-size: 1.8rem;
+    color: var(--mc-light-gray);
+    text-shadow: var(--text-shadow);
+}
+
+/* ============ TARJETAS DE ADD-ONS ============ */
+.addon-card {
+    color: var(--text-dark);
+    background-color: var(--mc-sand);
+    position: relative;
+    overflow: hidden;
+}
+
+.addon-title {
+    color: var(--mc-dark-green);
+    margin-bottom: var(--space-sm);
+    font-size: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.addon-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--mc-dark-green);
+}
+
+.addon-meta {
+    display: flex;
+    gap: var(--space-lg);
+    margin: var(--space-md) 0;
+    font-size: 0.9rem;
+    color: var(--mc-dark-brown);
+}
+
+.addon-preview {
+    width: 100%;
+    height: 180px;
+    background-color: var(--mc-dark-brown);
+    margin-bottom: var(--space-md);
+    border: var(--border-mc-inner);
+    overflow: hidden;
+}
+
+.addon-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.addon-card:hover .addon-preview img {
+    transform: scale(1.05);
+}
+
+.addon-rating {
+    margin: var(--space-sm) 0;
+    color: var(--mc-dark-brown);
+}
+
+.addon-rating i {
+    color: #ffc107;
+    margin-right: 2px;
+}
+
+/* ============ TARJETAS DE TUTORIALES ============ */
+.tutorial-card {
+    color: var(--text-dark);
+    background-color: var(--mc-sand);
+}
+
+.tutorial-card h3 {
+    margin-bottom: var(--space-sm);
+    color: var(--mc-dark-green);
+    font-size: 1.3rem;
+}
+
+.tutorial-duration {
+    display: inline-block;
+    background-color: var(--mc-dark-brown);
+    color: var(--mc-white);
+    padding: 0.2rem 0.5rem;
+    margin-bottom: var(--space-sm);
+    font-size: 0.8rem;
+}
+
+/* ============ BOTONES ============ */
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    background-color: var(--mc-green);
+    color: var(--mc-white) !important;
+    padding: var(--space-sm) var(--space-md);
+    text-decoration: none;
+    border: var(--border-mc);
+    margin-top: var(--space-sm);
+    transition: all 0.2s;
+    text-shadow: var(--text-shadow-sm);
+    cursor: pointer;
+}
+
+.download-btn:hover,
+.download-btn:focus {
+    background-color: var(--mc-dark-green);
+    transform: translateY(-2px);
+}
+
+.download-btn:active {
+    transform: translateY(0);
+}
+
+/* ============ FOOTER ============ */
+.main-footer {
+    background-color: var(--mc-dark-brown);
+    color: var(--mc-white);
+    text-align: center;
+    padding: var(--space-lg);
+    border-top: var(--border-mc);
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.disclaimer {
+    font-size: 0.9rem;
+    margin: var(--space-sm) 0;
+    opacity: 0.8;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    margin-top: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: var(--mc-light-green);
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-block;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+    transform: translateY(-2px);
+    color: var(--mc-green);
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+        margin-bottom: var(--space-lg);
+    }
+    .nav-link {
+        padding: 5px 10px;
+        font-size: 0.7rem;
+        margin: 0 1px;
+    }
+
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .addon-meta {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    .header-title {
+        font-size: 1.8rem;
+    }
+
+    .header-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .addon-card::after {
+        width: 70%;
+    }
+}
+
+/* ============ ANIMACIONES ============ */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* ============ FUENTE MINECRAFT ============ */
+@font-face {
+    font-family: 'Minecraft';
+    src: url('/assets/fonts/minecraft.woff2') format('woff2'),
+    url('/assets/fonts/minecraft.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ============ ACCESIBILIDAD ============ */
+a:focus,
+button:focus {
+    outline: 2px solid var(--mc-light-green);
+    outline-offset: 2px;
+}
