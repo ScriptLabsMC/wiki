@@ -1,10 +1,6 @@
 /*
-
-/* styles.css - Estilo Minecraft  para ScriptLabs */
-
-/* ============ VARIABLES ============ */
 :root {
-    /* Paleta de colores  */
+    
     --mc-dark-green: #2d4a07;
     --mc-green: #3e6a29;
     --mc-light-green: #5d9941;
@@ -16,33 +12,33 @@
     --mc-black: #050505;
     --mc-white: #f8f8f8;
 
-    /* Texto */
+    
     --text-primary: #f5f5f5;
     --text-secondary: #dddddd;
     --text-dark: #2a2a2a;
 
-    /* Bordes */
+    
     --border-mc: 4px solid var(--mc-dark-brown);
     --border-mc-inner: 3px solid var(--mc-brown);
 
-    /* Fuentes */
+    
     --font-mc: 'Courier New', monospace;
     --font-titles: 'Minecraft';
 
-    /* Espaciados */
+    
     --space-sm: 0.5rem;
     --space-md: 1rem;
     --space-lg: 1.5rem;
     --space-xl: 2rem;
 
-    /* Sombras y efectos */
+    
     --text-shadow: 2px 2px 0 var(--mc-black);
     --text-shadow-sm: 1px 1px 0 var(--mc-black);
     --shadow-fade-tr: linear-gradient(to right, #5d9941, #ffffff00);
     --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* ============ RESET Y ESTILOS BASE ============ */
+
 * {
     margin: 0;
     padding: 0;
@@ -64,7 +60,7 @@ body {
     flex-direction: column;
 }
 
-/* ============ BLOQUES MINECRAFT ============*/
+
 .mc-block {
     background-color: var(--mc-brown);
     border: var(--border-mc);
@@ -91,7 +87,7 @@ body {
     pointer-events: none;
 }
 
-/* ============ HEADER ============ */
+
 header {
     padding: var(--space-xl) 0;
     text-align: center;
@@ -149,7 +145,7 @@ header {
     margin-right: auto;
 }
 
-/* ============ NAVEGACIÓN ============ */
+
 .main-nav {
     background-color: var(--mc-brown);
     padding: 10px;
@@ -192,7 +188,7 @@ header {
     transform: translateY(-2px);
 }
 
-/* ============ LAYOUT PRINCIPAL ============ */
+
 .main-container {
     max-width: 1200px;
     margin: var(--space-lg) auto;
@@ -203,7 +199,7 @@ header {
     flex-grow: 1;
 }
 
-/* ============ SIDEBAR ============ */
+
 .sidebar {
     position: sticky;
     top: calc(var(--space-lg) + 60px);
@@ -265,7 +261,7 @@ header {
     padding-left: 10px;
 }
 
-/* ============ CONTENIDO PRINCIPAL ============ */
+
 .content {
     display: grid;
     gap: var(--space-lg);
@@ -279,7 +275,7 @@ header {
     text-shadow: var(--text-shadow);
 }
 
-/* ============ TARJETAS DE ADD-ONS ============ */
+
 .addon-card {
     color: var(--text-dark);
     background-color: var(--mc-sand);
@@ -343,7 +339,7 @@ header {
     margin-right: 2px;
 }
 
-/* ============ TARJETAS DE TUTORIALES ============ */
+
 .tutorial-card {
     color: var(--text-dark);
     background-color: var(--mc-sand);
@@ -364,7 +360,7 @@ header {
     font-size: 0.8rem;
 }
 
-/* ============ BOTONES ============ */
+
 .download-btn {
     display: inline-flex;
     align-items: center;
@@ -391,7 +387,7 @@ header {
     transform: translateY(0);
 }
 
-/* ============ FOOTER ============ */
+
 .main-footer {
     background-color: var(--mc-dark-brown);
     color: var(--mc-white);
@@ -433,7 +429,7 @@ header {
     color: var(--mc-green);
 }
 
-/* ============ RESPONSIVE ============ */
+
 @media (max-width: 768px) {
     .main-container {
         grid-template-columns: 1fr;
@@ -482,7 +478,7 @@ header {
     }
 }
 
-/* ============ ANIMACIONES ============ */
+
 @keyframes float {
     0%, 100% {
         transform: translateY(0);
@@ -492,7 +488,7 @@ header {
     }
 }
 
-/* ============ FUENTE MINECRAFT ============ */
+
 @font-face {
     font-family: 'Minecraft';
     src: url('/assets/fonts/minecraft.woff2') format('woff2'),
@@ -502,7 +498,7 @@ header {
     font-display: swap;
 }
 
-/* ============ ACCESIBILIDAD ============ */
+
 a:focus,
 button:focus {
     outline: 2px solid var(--mc-light-green);
