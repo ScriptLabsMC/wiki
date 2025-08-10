@@ -1,5 +1,5 @@
 // Fecha fija para el coming soon
-const targetDate = new Date("2025-08-30T00:00:00");
+const targetDate = new Date("2025-09-10T00:00:00");
 
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
