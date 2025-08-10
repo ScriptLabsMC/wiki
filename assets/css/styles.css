@@ -1,3 +1,5 @@
+/*
+
 /* styles.css - Estilo Minecraft  para ScriptLabs */
 
 /* ============ VARIABLES ============ */
@@ -505,4 +507,169 @@ a:focus,
 button:focus {
     outline: 2px solid var(--mc-light-green);
     outline-offset: 2px;
+}
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url("bckg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #fff6cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: auto;
+    background: rgba(40, 32, 10, 0.75);
+    border-radius: 15px;
+    padding: 40px 30px;
+    max-width: 420px;
+    width: 80%;
+    box-shadow: 0 0 25px 5px #ffd84d;
+    user-select: none;
+}
+
+@keyframes goldenGlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.title {
+    font-family: Times New Roman;
+    font-size: 3rem;
+    letter-spacing: 0.12em;
+    background: linear-gradient(90deg, #ffcc33, #fff6a1, #ffcc33);
+    background-size: 200% 200%;
+    animation: goldenGlow 8s ease-in-out infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 8px rgba(255, 204, 51, 0.6);
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 28px;
+    background: linear-gradient(90deg, #ffeb99, #ffe066, #ffeb99);
+    background-size: 200% 200%;
+    animation: goldenGlow 10s ease-in-out infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 4px rgba(255, 204, 51, 0.3);
+    font-weight: 500;
+}
+
+.coming-soon-text {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    background: linear-gradient(90deg, #fff6a1, #ffcc33, #fff6a1);
+    background-size: 200% 200%;
+    animation: goldenGlow 6s ease-in-out infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+        0 0 4px rgba(255, 204, 51, 0.4),
+        0 0 8px rgba(255, 204, 51, 0.3);
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.countdown div {
+    flex: 1;
+    background: #332b00; 
+    margin: 0 5px;
+    padding: 15px 0;
+    border-radius: 8px;
+    box-shadow:
+        inset 0 0 5px #ffcc33,
+        0 0 5px #ffcc33;
+}
+
+.countdown span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ffe066, #ffcc33, #ffe066);
+    background-size: 200% 200%;
+    animation: goldenGlow 7s ease-in-out infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+        0 0 4px rgba(255, 204, 51, 0.4),
+        0 0 6px rgba(255, 204, 51, 0.3);
+}
+
+.countdown small {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85rem;
+    color: #ffeeb3; 
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 0.85rem;
+    color: #e6d68a; 
+}
+
+
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .coming-soon-text {
+        font-size: 1.5rem;
+    }
+
+    .countdown span {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1248px) {
+    .container {
+        min-width: 800px;
+        min-height: 400px;
+    }
+    .title {
+        font-size: 3.5rem;
+    }
+
+    .coming-soon-text {
+        font-size: 3rem;
+    }
+
+    .countdown span {
+        font-size: 4rem;
+    }
 }
