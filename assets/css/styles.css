@@ -563,10 +563,14 @@ body {
 .habilities {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   position: absolute;
+  width: 70px;
   top: 15px;
   right: 15px;
+}
+
+.habilities img {
+  margin-bottom: 5px;
 }
 
 /* =========================================
