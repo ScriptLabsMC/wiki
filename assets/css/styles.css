@@ -561,6 +561,10 @@ body {
 }
 
 .habilities {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-around;
   position: absolute;
   top: 15px;
   right: 15px;
