@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1" />
+		<title>Comunidad — ScriptLabs</title>
+		<meta
+			name="description"
+			content="Únete al Discord y conecta con otros desarrolladores de Add-ons." />
+		<link
+			rel="icon"
+			href="/assets/img/logo.png"
+			type="image/png+xml" />
+		<link
+			rel="stylesheet"
+			href="/assets/css/styles.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+			rel="stylesheet" />
+		<!-- Preload componentes -->
+		<link
+			rel="preload"
+			href="/components/nav.html"
+			as="fetch"
+			crossorigin="anonymous" />
+		<link
+			rel="preload"
+			href="/components/footer.html"
+			as="fetch"
+			crossorigin="anonymous" />
+
+		<!-- Cargar loader primero -->
+		<script
+			src="/components/loader.js"
+			defer></script>
+		<!-- Scripts generales -->
+		<script
+			src="/assets/js/scripts.js"
+			defer></script>
+	</head>
+	<body>
+		<div class="bg-hero"></div>
+		<header class="site-header"></header>
+
+		<main class="section narrow">
+			<h1 class="gradient-text">Comunidad</h1>
+			<p>
+				Nos reunimos en Discord para resolver dudas y mostrar avances.
+				También anunciamos streams y lanzamientos.
+			</p>
+
+			<div class="card glass embed">
+				<iframe
+					title="Discord"
+					src="https://discord.com/widget?id=1389624640271552734&theme=dark"
+					width="100%"
+					height="400"
+					allowtransparency="true"
+					frameborder="0"
+					sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+			</div>
+
+			<div class="grid-2">
+				<a
+					class="btn btn-primary"
+					href="https://discord.gg/BFG3T8MBWN"
+					target="_blank"
+					rel="noopener"
+					>Entrar a Discord</a
+				>
+				<a
+					class="btn btn-ghost"
+					href="https://youtube.com/@ScriptLabs"
+					target="_blank"
+					rel="noopener"
+					>Canal de YouTube</a
+				>
+			</div>
+		</main>
+
+		<footer class="site-footer"></footer>
+		<script src="/assets/js/utils/svg-finder.js"></script>
+	</body>
+</html>

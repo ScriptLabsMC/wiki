@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1" />
+		<title>Formulario — ScriptLabs</title>
+		<meta
+			name="description"
+			content="Formulario de contacto y registro de ScriptLabs." />
+		<link
+			rel="icon"
+			href="/assets/img/logo.png"
+			type="image/png" />
+		<link
+			rel="stylesheet"
+			href="/assets/css/styles.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+			rel="stylesheet" />
+		<!-- Preload componentes -->
+		<link
+			rel="preload"
+			href="/components/nav.html"
+			as="fetch"
+			crossorigin="anonymous" />
+		<link
+			rel="preload"
+			href="/components/footer.html"
+			as="fetch"
+			crossorigin="anonymous" />
+
+		<!-- Cargar loader primero -->
+		<script
+			src="/components/loader.js"
+			defer></script>
+		<!-- Scripts generales -->
+		<script
+			src="/assets/js/scripts.js"
+			defer></script>
+	</head>
+	<body>
+	  <div class="bg-hero"></div>
+		<header class="site-header">
+			<!-- Aquí se cargará tu nav como en las otras páginas -->
+			<div id="nav"></div>
+		</header>
+
+		<main class="site-main">
+			<section class="section">
+				<h1 class="section-title">Formulario</h1>
+				<p class="section-description">
+					Completa el formulario para enviarnos tu información.
+				</p>
+
+				<div
+					class="form-container"
+					style="
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					">
+					<iframe
+						width="640px"
+						height="480px"
+						src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAFCeYsJUOEZFUkZNVUpUTllBVFhYUDc2TEhEOFFYSy4u&embed=true"
+						frameborder="0"
+						marginwidth="0"
+						marginheight="0"
+						style="
+							border: none;
+							max-width: 100%;
+							max-height: 100vh;
+							border-radius: 12px;
+							box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+						"
+						allowfullscreen
+						webkitallowfullscreen
+						mozallowfullscreen
+						msallowfullscreen>
+					</iframe>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<p>© 2025 ScriptLabs. Todos los derechos reservados.</p>
+		</footer>
+
+		<script src="/assets/js/utils/svg-finder.js"></script>
+	</body>
+</html>

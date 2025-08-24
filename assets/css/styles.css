@@ -1,0 +1,617 @@
+/* =========================================
+   VARIABLES GLOBALES
+   ========================================= */
+:root {
+	--bg: #0b0f14;
+	--card: rgba(255, 255, 255, 0.06);
+	--border: rgba(255, 255, 255, 0.12);
+	--text: #dbe5ff;
+	--muted: #9fb0d0;
+	--primary: #08ffc8; /* verde neon */
+	--accent1: #00a2ff; /* azul */
+	--accent2: #7a00ff; /* morado electrico */
+	--radius: 16px;
+	--shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+	--sl-grd: linear-gradient(
+		135deg,
+		var(--accent1),
+		var(--accent2) 50%,
+		var(--primary)
+	);
+}
+
+/* =========================================
+   RESET Y BASE
+   ========================================= */
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family:
+		Inter,
+		system-ui,
+		-apple-system,
+		"Segoe UI",
+		Roboto,
+		"Helvetica Neue",
+		Arial,
+		"Noto Sans",
+		"Apple Color Emoji",
+		"Segoe UI Emoji";
+	color: var(--text);
+	background: var(--bg);
+	line-height: 1.6;
+}
+
+/* =========================================
+   BACKDROP ANIMADO
+   ========================================= */
+.bg-hero {
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	background: radial-gradient(
+			1200px 600px at 20% 10%,
+			rgba(0, 162, 255, 0.2),
+			transparent 60%
+		),
+		radial-gradient(
+			1000px 600px at 80% 20%,
+			rgba(122, 0, 255, 0.18),
+			transparent 60%
+		),
+		radial-gradient(
+			800px 500px at 50% 80%,
+			rgba(8, 255, 200, 0.16),
+			transparent 60%
+		);
+	filter: blur(40px) saturate(120%);
+	animation: float 20s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+	from {
+		transform: translateY(-2%);
+	}
+	to {
+		transform: translateY(2%);
+	}
+}
+
+/* =========================================
+   SECCIONES
+   ========================================= */
+.section {
+	padding: 30px 20px;
+}
+
+.section:last-child::after {
+	content: none;
+}
+
+.section.narrow {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.section-title {
+	font-size: 28px;
+	margin: 0 0 16px;
+}
+
+.lead {
+	color: var(--muted);
+	max-width: 760px;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 50;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 14px 20px;
+	backdrop-filter: saturate(130%) blur(8px);
+	background: linear-gradient(
+		180deg,
+		rgba(11, 15, 20, 0.9),
+		rgba(11, 15, 20, 0.65)
+	);
+	border-bottom: 1px solid var(--border);
+}
+
+.brand {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	text-decoration: none;
+	color: var(--text);
+	font-weight: 800;
+	letter-spacing: 0.2px;
+}
+
+.brand.small span {
+	font-weight: 700;
+}
+
+.nav {
+	display: flex;
+	gap: 18px;
+}
+
+.nav a {
+	color: var(--muted);
+	text-decoration: none;
+	padding: 8px 10px;
+	border-radius: 10px;
+}
+
+.nav a.active,
+.nav a:hover {
+	color: var(--text);
+	background: rgba(255, 255, 255, 0.06);
+}
+
+.nav-toggle {
+	display: none;
+	background: transparent;
+	border: 0;
+	color: var(--text);
+	font-size: 22px;
+}
+
+/* =========================================
+   HERO
+   ========================================= */
+.hero {
+	display: grid;
+	grid-template-columns: 1.1fr 0.9fr;
+	gap: 28px;
+	align-items: center;
+}
+
+.hero-content h1 {
+	font-size: 40px;
+	margin: 0.2em 0;
+}
+
+.hero-mark {
+	filter: drop-shadow(0 0 18px rgba(8, 255, 200, 0.45));
+}
+
+.logo {
+	color: white !important;
+	background: white !important;
+}
+
+.hero-showcase {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px;
+}
+
+/* =========================================
+   CARDS Y GLASS
+   ========================================= */
+.card {
+	background: var(--card);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 18px;
+	box-shadow: var(--shadow);
+}
+
+.glass {
+	backdrop-filter: blur(8px) saturate(120%);
+}
+
+.card h3 {
+	margin: 0 0 6px;
+}
+
+.card .actions {
+	display: flex;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+/* =========================================
+   GRIDS / FEATURES
+   ========================================= */
+.grid-3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px;
+}
+
+.grid-2 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 16px;
+}
+
+.feature,
+.addon,
+.tools article {
+	padding: 18px;
+}
+
+/* =========================================
+   ICONOS
+   ========================================= */
+.icon {
+	font-size: 22px;
+}
+
+/* =========================================
+   BOTONES
+   ========================================= */
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 10px 14px;
+	border-radius: 12px;
+	text-decoration: none;
+	border: 1px solid var(--border);
+}
+
+.btn-primary {
+	background: linear-gradient(
+		135deg,
+		var(--accent1),
+		var(--accent2) 50%,
+		var(--primary)
+	);
+	color: white;
+	border: 0;
+	box-shadow: 0 8px 24px rgba(0, 162, 255, 0.25);
+}
+
+.btn-ghost {
+	background: transparent;
+	color: var(--text);
+}
+
+.btn:hover {
+	transform: translateY(-1px);
+}
+
+/* =========================================
+   CHIPS
+   ========================================= */
+.chip {
+	display: inline-flex;
+	align-items: center;
+	padding: 6px 10px;
+	border-radius: 999px;
+	border: 1px solid var(--border);
+	text-decoration: none;
+}
+
+/* =========================================
+   ADD-ONS
+   ========================================= */
+.card .thumb {
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	overflow: hidden;
+}
+
+.card .thumb img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.addon .thumb {
+	height: 140px;
+	border-radius: 12px;
+	background: #0f1722;
+	border: 1px dashed var(--border);
+	margin-bottom: 10px;
+}
+
+.addon .thumb.placeholder {
+	background: linear-gradient(135deg, #0f1722, #121a26);
+}
+
+/* =========================================
+   TUTORIALES / FILTROS
+   ========================================= */
+.filters {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 12px;
+	overflow: scroll;
+	border: solid 1px var(--border);
+	padding: 10px;
+	border-radius: 20px;
+}
+
+.filters::-webkit-scrollbar {
+	display: none;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.site-footer {
+	border-top: 1px solid var(--border);
+	padding: 20px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.footer-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 16px;
+	flex-wrap: wrap;
+	min-width: 100vw;
+	padding: 0 50px;
+}
+
+.footer-nav {
+	display: flex;
+	gap: 14px;
+	align-self: flex-end;
+}
+
+.footer-nav a {
+	color: var(--muted);
+	text-decoration: none;
+}
+
+.footer-nav a.active,
+.footer-nav a:hover {
+	color: var(--text);
+}
+
+.card.socials {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-auto-columns: 1fr;
+	justify-content: space-evenly;
+	width: 100%;
+}
+
+.socials a {
+	color: var(--muted);
+	text-decoration: none;
+}
+
+.socials a span.yt {
+	position: relative;
+	bottom: 12px;
+}
+
+.socials a span.dc {
+	position: relative;
+	bottom: 20px;
+}
+.socials a span.cf {
+  position: relative;
+  bottom: 15px;
+}
+
+.legal {
+	color: var(--muted);
+	margin-top: 12px;
+	text-align: center;
+	align-self: center;
+}
+
+/* =========================================
+   UTILIDADES
+   ========================================= */
+.gradient-text {
+	background: linear-gradient(
+		90deg,
+		var(--accent1),
+		var(--accent2),
+		var(--primary)
+	);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 980px) {
+	.hero {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 760px) {
+	.nav {
+		position: fixed;
+		right: 12px;
+		top: 64px;
+		background: rgba(11, 15, 20, 0.95);
+		backdrop-filter: blur(10px);
+		padding: 10px;
+		border-radius: 12px;
+		display: none;
+		flex-direction: column;
+	}
+	.nav.open {
+		display: flex;
+	}
+	.nav-toggle {
+		display: block;
+	}
+	.grid-3,
+	.grid-2 {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (min-width: 1280px) {
+  .card.socials {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+/* =========================================
+   SCRIPT LABS ICONOS / MENU
+   ========================================= */
+.sl {
+	height: 40px;
+	width: 40px;
+}
+
+#sl-menu {
+	height: 35px;
+	width: 35px;
+}
+
+.menu-dot {
+	transition: fill 0.3s ease;
+}
+
+.menu-circle {
+	stroke: white;
+	stroke-width: 1.5;
+	fill: none;
+	transition: stroke 0.3s ease;
+}
+
+.sl-menu:hover .menu-dot {
+	fill: var(--primary);
+}
+
+.sl-menu:hover .menu-circle {
+	stroke: var(--accent2);
+}
+
+#sl-discord {
+	height: 45px;
+	width: 45px;
+}
+
+.sl-icon .atom {
+	stroke: url(#grd);
+}
+
+.sl-icon .border,
+.sl-icon .code {
+	stroke: var(--primary);
+}
+.hero-content .sl-icon {
+  height: 80px;
+  width: 80px;
+}
+
+.cf {
+  height: 45px;
+  width: 45px;
+}
+
+.cf .cf-circle {
+  fill: whitesmoke
+}
+
+.forge {
+  fill: darkorange;
+}
+
+
+/* =========================================
+   TEAM / PERSONAS
+   ========================================= */
+.person {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	padding: 20px;
+}
+
+.avatar {
+	align-self: center;
+	display: flex;
+	justify-content: center;
+	width: 80%;
+	border-radius: 50%;
+}
+
+.avatar img {
+	border-radius: 50%;
+	max-width: 30%;
+	margin-bottom: 0.5rem;
+}
+
+.habilities {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+/* =========================================
+   EVITAR FLASH DE CONTENIDO SIN ESTILO
+   ========================================= */
+.site-header:empty,
+.site-footer:empty {
+	display: none;
+}
+
+.site-header:not(:empty),
+.site-footer:not(:empty) {
+	display: flex;
+	animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* =========================================
+   VIDEOS
+   ========================================= */
+.vid {
+	display: flex;
+	flex-direction: column;
+	padding: 25px;
+}
+
+.vid img {
+	max-width: 80%;
+	justify-self: center;
+	margin: 0 auto;
+}
+
+.loading,
+.not-found {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.not-found img {
+	margin: 0 auto;
+}

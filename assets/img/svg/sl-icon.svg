@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	x="0%" y="0%"
+	width="100%" height="100%"
+	viewBox="0 0 24.0 24.0"
+	enable-background="new 0 0 24.0 24.0"
+	xml:space="preserve">
+  <g class="border" id="sl-border">
+	<path
+		fill="none"
+		stroke="#F700FF"
+		fill-opacity="0.000"
+		stroke-opacity="1.000"
+		fill-rule="nonzero"
+		stroke-width="0.84000003"
+		stroke-linejoin="round"
+		stroke-linecap="square"
+		d="M22.50,6.38L12.00,0.38L1.50,6.37L1.50,17.63L12.00,23.63L22.50,17.63L22.50,6.38z"/>
+  </g>
+  <g class="atom" id="sl-atom">
+	<path
+		fill="none"
+		stroke="#FF083A"
+		fill-opacity="0.020"
+		stroke-opacity="1.000"
+		fill-rule="nonzero"
+		stroke-width="0.84000003"
+		stroke-linejoin="round"
+		stroke-linecap="square"
+		d="M4.97,16.31C3.99,14.72,6.35,11.50,10.24,9.12C14.12,6.74,18.06,6.10,19.03,7.69C20.01,9.28,17.65,12.50,13.76,14.88C9.88,17.26,5.94,17.90,4.97,16.31z"/>
+	<path
+		fill="none"
+		stroke="#FF083A"
+		fill-opacity="0.020"
+		stroke-opacity="1.000"
+		fill-rule="nonzero"
+		stroke-width="0.84000003"
+		stroke-linejoin="round"
+		stroke-linecap="square"
+		d="M19.03,16.31C18.06,17.90,14.12,17.26,10.24,14.88C6.35,12.50,3.99,9.28,4.97,7.69C5.94,6.10,9.88,6.74,13.76,9.12C17.65,11.50,20.01,14.72,19.03,16.31z"/>
+	<path
+		fill="none"
+		stroke="#FF083A"
+		fill-opacity="0.020"
+		stroke-opacity="1.000"
+		fill-rule="nonzero"
+		stroke-width="0.84000003"
+		stroke-linejoin="round"
+		stroke-linecap="square"
+		d="M12.00,3.75C13.86,3.75,15.38,7.44,15.38,12.00C15.38,16.56,13.86,20.25,12.00,20.25C10.14,20.25,8.63,16.56,8.63,12.00C8.63,7.44,10.14,3.75,12.00,3.75z"/>
+  </g>
+<g class="code" id="sl-code">
+	<path
+		fill="none"
+		stroke="#0C08FF"
+		fill-opacity="0.000"
+		stroke-opacity="1.000"
+		fill-rule="nonzero"
+		stroke-width="0.5498102"
+		stroke-linejoin="round"
+		stroke-linecap="round"
+		d="M13.44,11.28Q15.72,11.95,13.41,12.94"/>
+	<path
+		fill="none"
+		stroke="#0C08FF"
+		fill-opacity="0.000"
+		stroke-opacity="1.000"
+		fill-rule="nonzero"
+		stroke-width="0.65977263"
+		stroke-linejoin="round"
+		stroke-linecap="round"
+		d="M11.62,13.50L12.37,10.88"/>
+	<path
+		fill="none"
+		stroke="#0C08FF"
+		fill-opacity="0.000"
+		stroke-opacity="1.000"
+		fill-rule="nonzero"
+		stroke-width="0.5498102"
+		stroke-linejoin="round"
+		stroke-linecap="round"
+		d="M10.56,11.28Q8.28,11.95,10.59,12.94"/>
+</g>
+</svg>
