@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Panel — ScriptLabs</title>
+<link rel="stylesheet" href="/assets/css/styles.css">
+<style>
+body { position: relative; font-family: Inter, sans-serif; }
+.modal-backdrop {
+  position: fixed; inset:0; background: rgba(0,0,0,0.5);
+  display:flex; justify-content:center; align-items:center; z-index:9999;
+}
+.modal-content {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  padding:2rem; border-radius:12px; max-width:500px; width:90%;
+  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+.modal-content input, .modal-content textarea, .modal-content button {
+  width: 100%; margin:0.5rem 0; padding:0.5rem; border-radius:6px;
+  border:1px solid #ccc; background: #fff; box-sizing:border-box;
+}
+#admin-status { margin-top:1rem; font-weight:bold; text-align:center; color:white; }
+</style>
+</head>
+<body>
+<div id="admin-status"></div>
+
+<script>
+const WORKER_URL = "https://team.anthonyuribe3456.workers.dev";
+let ADMIN_TOKEN = "";
+
+// Modal de login
+function showTokenModal() {
+  const modal = document.createElement("div");
+  modal.className = "modal-backdrop";
+  modal.innerHTML = `
+    <div class="modal-content">
+      <h2>Admin login</h2>
+      <input type="password" class="token-input" placeholder="Código de seguridad">
+      <button class="login-btn" type="button">Ingresar</button>
+    </div>`;
+  document.body.appendChild(modal);
+  modal.addEventListener("click", e => { if(e.target===modal) modal.remove(); });
+  const loginBtn = modal.querySelector(".login-btn");
+  const tokenInput = modal.querySelector(".token-input");
+  loginBtn.onclick = async () => {
+    const token = tokenInput.value.trim();
+    if(!token) return alert("Ingresa el token");
+    try {
+      const res = await fetch(`${WORKER_URL}/auth`, { headers:{Authorization:`Bearer ${token}`} });
+      if(res.status===200){ 
+        ADMIN_TOKEN = token;
+        modal.remove();
+        showAdminPanel();
+      } else {
+        alert("Token incorrecto");
+      }
+    } catch(e) { alert("Error al validar token"); }
+  };
+}
+
+// Panel admin
+function showAdminPanel(){
+  const modal = document.createElement("div");
+  modal.className = "modal-backdrop";
+  modal.innerHTML = `
+    <div class="modal-content">
+      <h2>Agregar Miembro</h2>
+      <input class="m-id" placeholder="ID" required>
+      <input class="m-name" placeholder="Nombre" required>
+      <input class="m-role" placeholder="Rol">
+      <input class="m-avatar" placeholder="Avatar URL">
+      <textarea class="m-bio" placeholder="Bio"></textarea>
+      <button class="add-btn" type="button">Agregar</button>
+      <hr>
+      <h2>Editar Miembro</h2>
+      <input class="e-id" placeholder="ID a editar" required>
+      <textarea class="e-data" placeholder='JSON: {"name":"Nuevo","role":"Rol"}'></textarea>
+      <button class="edit-btn" type="button">Editar</button>
+      <hr>
+      <h2>Borrar Miembro</h2>
+      <input class="d-id" placeholder="ID a borrar" required>
+      <button class="del-btn" type="button">Borrar</button>
+    </div>`;
+  document.body.appendChild(modal);
+  modal.addEventListener("click", e=>{if(e.target===modal) modal.remove();});
+
+  const status = document.getElementById("admin-status");
+
+  // AGREGAR
+  modal.querySelector(".add-btn").onclick = async ()=>{
+    const member = {
+      id: modal.querySelector(".m-id").value.trim(),
+      name: modal.querySelector(".m-name").value.trim(),
+      role: modal.querySelector(".m-role").value.trim(),
+      avatar: modal.querySelector(".m-avatar").value.trim()||null,
+      bio: modal.querySelector(".m-bio").value.trim()||"",
+      badges:[]
+    };
+    try {
+      const res = await fetch(`${WORKER_URL}/team/add`, {
+        method:"POST", headers:{"Content-Type":"application/json","Authorization":`Bearer ${ADMIN_TOKEN}`},
+        body:JSON.stringify(member)
+      });
+      status.textContent = res.ok?"Miembro agregado!":"Error: "+res.status;
+    } catch(e){ status.textContent = "Error de conexión"; }
+  };
+
+  // EDITAR
+  modal.querySelector(".edit-btn").onclick = async ()=>{
+    const id = modal.querySelector(".e-id").value.trim();
+    let data;
+    try{ data = JSON.parse(modal.querySelector(".e-data").value); } catch { return alert("JSON inválido"); }
+    try{
+      const res = await fetch(`${WORKER_URL}/team/edit`, {
+        method:"POST", headers:{"Content-Type":"application/json","Authorization":`Bearer ${ADMIN_TOKEN}`},
+        body: JSON.stringify({id,data})
+      });
+      status.textContent = res.ok?"Miembro editado!":"Error: "+res.status;
+    } catch(e){ status.textContent="Error de conexión"; }
+  };
+
+  // BORRAR
+  modal.querySelector(".del-btn").onclick = async ()=>{
+    const id = modal.querySelector(".d-id").value.trim();
+    try{
+      const res = await fetch(`${WORKER_URL}/team/delete`, {
+        method:"POST", headers:{"Content-Type":"application/json","Authorization":`Bearer ${ADMIN_TOKEN}`},
+        body: JSON.stringify({id})
+      });
+      status.textContent = res.ok?"Miembro borrado!":"Error: "+res.status;
+    } catch(e){ status.textContent="Error de conexión"; }
+  };
+}
+
+document.addEventListener("DOMContentLoaded", showTokenModal);
+</script>
+</body>
+</html>
