@@ -3,8 +3,8 @@ const loading = document.getElementById("loading");
 const noVideos = document.getElementById("not-found");
 
 fetch("https://tu-worker.cloudflareworkers.com")
-  .then(res => res.json())
-  .then(data => {
+  .then((res) => res.json())
+  .then((data) => {
     loading.style.display = "none";
 
     if (data.length === 0) {
@@ -12,14 +12,14 @@ fetch("https://tu-worker.cloudflareworkers.com")
       return;
     }
 
-    data.forEach(video => {
+    data.forEach((video) => {
       const article = document.createElement("article");
       article.className = "card glass";
       article.dataset.level = video.level || "no-category";
 
       article.innerHTML = `
         <h3>${video.title}</h3>
-        ${video.thumbnail ? `<img src="${video.thumbnail}" alt="miniatura">` : ''}
+        ${video.thumbnail ? `<img src="${video.thumbnail}" alt="miniatura">` : ""}
         <p>Publicado: ${video.published}</p>
         <div class="actions">
           <a class="btn btn-primary" href="${video.link}" target="_blank" rel="noopener">Ver video</a>
@@ -29,10 +29,10 @@ fetch("https://tu-worker.cloudflareworkers.com")
       list.appendChild(article);
     });
   })
-  .catch(err => {
+  .catch((err) => {
     loading.style.display = "none";
     noVideos.style.display = "flex";
-    noVideos.style.flexDirection = 'column';
-    noVideos.style.alignItems = 'center';
+    noVideos.style.flexDirection = "column";
+    noVideos.style.alignItems = "center";
     console.error(err);
   });

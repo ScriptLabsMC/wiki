@@ -1,244 +1,301 @@
-
 <!-- index.html -->
 <!doctype html>
 <html lang="es">
-	<head>
-		<!-- Critical CSS inlined for faster first paint -->
-		<style>
-			:root {
-				--bg: #0b0f14;
-				--card: rgba(255, 255, 255, 0.06);
-				--border: rgba(255, 255, 255, 0.12);
-				--text: #dbe5ff;
-				--muted: #9fb0d0;
-				--primary: #08ffc8;
-				--accent1: #00a2ff;
-				--accent2: #7a00ff;
-				--radius: 16px;
-				--shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-				--sl-grd: linear-gradient(135deg, var(--accent1), var(--accent2) 50%, var(--primary));
-			}
-			html, body { height: 100%; }
-			body {
-				margin: 0;
-				font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-				color: var(--text);
-				background: var(--bg);
-				line-height: 1.6;
-			}
-			.bg-hero {
-				position: fixed;
-				inset: 0;
-				z-index: -1;
-				background: radial-gradient(1200px 600px at 20% 10%, rgba(0, 162, 255, 0.2), transparent 60%),
-					radial-gradient(1000px 600px at 80% 20%, rgba(122, 0, 255, 0.18), transparent 60%),
-					radial-gradient(800px 500px at 50% 80%, rgba(8, 255, 200, 0.16), transparent 60%);
-				filter: blur(40px) saturate(120%);
-				animation: float 20s ease-in-out infinite alternate;
-			}
-			@keyframes float {
-				from { transform: translateY(-2%); }
-				to { transform: translateY(2%); }
-			}
-			.site-header {
-				position: sticky;
-				top: 0;
-				z-index: 50;
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				padding: 14px 20px;
-				backdrop-filter: saturate(130%) blur(8px);
-				background: linear-gradient(180deg, rgba(11, 15, 20, 0.9), rgba(11, 15, 20, 0.65));
-				border-bottom: 1px solid var(--border);
-			}
-			.hero.section {
-				display: grid;
-				grid-template-columns: 1fr;
-				gap: 28px;
-				align-items: center;
-				padding: 30px 20px;
-			}
-			.hero-content h1 {
-				font-size: 40px;
-				margin: 0.2em 0;
-			}
-			.gradient-text {
-				background: linear-gradient(90deg, var(--accent1), var(--accent2), var(--primary));
-				-webkit-background-clip: text;
-				background-clip: text;
-				color: transparent;
-			}
-			.lead { color: var(--muted); max-width: 760px; }
-			.btn {
-				display: inline-flex;
-				align-items: center;
-				justify-content: center;
-				gap: 8px;
-				padding: 10px 14px;
-				border-radius: 12px;
-				text-decoration: none;
-				border: 1px solid var(--border);
-			}
-			.btn-primary {
-				background: linear-gradient(135deg, var(--accent1), var(--accent2) 50%, var(--primary));
-				color: white;
-				border: 0;
-				box-shadow: 0 8px 24px rgba(0, 162, 255, 0.25);
-			}
-			.btn-ghost { background: transparent; color: var(--text); }
-			.section-title { font-size: 28px; margin: 0 0 16px; }
-			.grid-3 {
-				display: grid;
-				grid-template-columns: repeat(3, 1fr);
-				gap: 16px;
-			}
-			.feature.card.glass {
-				background: var(--card);
-				border: 1px solid var(--border);
-				border-radius: var(--radius);
-				padding: 18px;
-				box-shadow: var(--shadow);
-				backdrop-filter: blur(8px) saturate(120%);
-			}
-		</style>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1" />
-		<title>ScriptLabs — Innovación en Add-ons de Minecraft Bedrock</title>
-		<meta
-			name="description"
-			content="Equipo de desarrolladores de Add-ons para Minecraft Bedrock. Herramientas, librerías y tutoriales para ayudarte a crear tus propios add-ons." />
-		<meta
-			name="theme-color"
-			content="#08FFC8" />
-		<link
-			rel="preload"
-			href="/assets/img/logo.png"
-			as="image" />
-		<link
-			rel="icon"
-			href="/assets/img/logo.png"
-			type="image/png+xml" />
-		<meta
-			property="og:title"
-			content="ScriptLabs" />
-		<meta
-			property="og:description"
-			content="Herramientas y tutoriales para Add-ons de Minecraft Bedrock." />
-		<meta
-			property="og:image"
-			content="assets/img/logo.png" />
-		<meta
-			property="og:type"
-			content="website" />
-		<!-- Preconnect and preload for fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link rel="preload" as="style" href="/assets/css/styles.css" />
-		<link rel="stylesheet" href="/assets/css/styles.css" media="all" />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" media="all" />
+  <head>
+    <!-- Critical CSS inlined for faster first paint -->
+    <style>
+      :root {
+        --bg: #0b0f14;
+        --card: rgba(255, 255, 255, 0.06);
+        --border: rgba(255, 255, 255, 0.12);
+        --text: #dbe5ff;
+        --muted: #9fb0d0;
+        --primary: #08ffc8;
+        --accent1: #00a2ff;
+        --accent2: #7a00ff;
+        --radius: 16px;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        --sl-grd: linear-gradient(
+          135deg,
+          var(--accent1),
+          var(--accent2) 50%,
+          var(--primary)
+        );
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family:
+          Inter,
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          "Noto Sans",
+          "Apple Color Emoji",
+          "Segoe UI Emoji";
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.6;
+      }
+      .bg-hero {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background:
+          radial-gradient(
+            1200px 600px at 20% 10%,
+            rgba(0, 162, 255, 0.2),
+            transparent 60%
+          ),
+          radial-gradient(
+            1000px 600px at 80% 20%,
+            rgba(122, 0, 255, 0.18),
+            transparent 60%
+          ),
+          radial-gradient(
+            800px 500px at 50% 80%,
+            rgba(8, 255, 200, 0.16),
+            transparent 60%
+          );
+        filter: blur(40px) saturate(120%);
+        animation: float 20s ease-in-out infinite alternate;
+      }
+      @keyframes float {
+        from {
+          transform: translateY(-2%);
+        }
+        to {
+          transform: translateY(2%);
+        }
+      }
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 20px;
+        backdrop-filter: saturate(130%) blur(8px);
+        background: linear-gradient(
+          180deg,
+          rgba(11, 15, 20, 0.9),
+          rgba(11, 15, 20, 0.65)
+        );
+        border-bottom: 1px solid var(--border);
+      }
+      .hero.section {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        align-items: center;
+        padding: 30px 20px;
+      }
+      .hero-content h1 {
+        font-size: 40px;
+        margin: 0.2em 0;
+      }
+      .gradient-text {
+        background: linear-gradient(
+          90deg,
+          var(--accent1),
+          var(--accent2),
+          var(--primary)
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .lead {
+        color: var(--muted);
+        max-width: 760px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px 14px;
+        border-radius: 12px;
+        text-decoration: none;
+        border: 1px solid var(--border);
+      }
+      .btn-primary {
+        background: linear-gradient(
+          135deg,
+          var(--accent1),
+          var(--accent2) 50%,
+          var(--primary)
+        );
+        color: white;
+        border: 0;
+        box-shadow: 0 8px 24px rgba(0, 162, 255, 0.25);
+      }
+      .btn-ghost {
+        background: transparent;
+        color: var(--text);
+      }
+      .section-title {
+        font-size: 28px;
+        margin: 0 0 16px;
+      }
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      .feature.card.glass {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 18px;
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(8px) saturate(120%);
+      }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ScriptLabs — Innovación en Add-ons de Minecraft Bedrock</title>
+    <meta
+      name="description"
+      content="Equipo de desarrolladores de Add-ons para Minecraft Bedrock. Herramientas, librerías y tutoriales para ayudarte a crear tus propios add-ons."
+    />
+    <meta name="theme-color" content="#08FFC8" />
+    <link rel="preload" href="/assets/img/logo.png" as="image" />
+    <link rel="icon" href="/assets/img/logo.png" type="image/png+xml" />
+    <meta property="og:title" content="ScriptLabs" />
+    <meta
+      property="og:description"
+      content="Herramientas y tutoriales para Add-ons de Minecraft Bedrock."
+    />
+    <meta property="og:image" content="assets/img/logo.png" />
+    <meta property="og:type" content="website" />
+    <!-- Preconnect and preload for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" media="all" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+      media="all"
+    />
 
-		<!-- Preload hero image for faster LCP -->
-		<link rel="preload" as="image" href="/assets/img/logo.png" imagesrcset="/assets/img/logo.png 1x" />
+    <!-- Preload hero image for faster LCP -->
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/img/logo.png"
+      imagesrcset="/assets/img/logo.png 1x"
+    />
 
-		<!-- Preload componentes -->
-		<link
-			rel="preload"
-			href="/components/nav.html"
-			as="fetch"
-			crossorigin="anonymous" />
-		<link
-			rel="preload"
-			href="/components/footer.html"
-			as="fetch"
-			crossorigin="anonymous" />
+    <!-- Preload componentes -->
+    <link
+      rel="preload"
+      href="/components/nav.html"
+      as="fetch"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/components/footer.html"
+      as="fetch"
+      crossorigin="anonymous"
+    />
 
-		<!-- Cargar loader primero -->
-		<script src="/components/loader.js" defer></script>
-		<!-- Scripts generales -->
-		<script src="/assets/js/scripts.js" defer></script>
-	</head>
-	<body>
-		<div class="bg-hero"></div>
+    <!-- Cargar loader primero -->
+    <script src="/components/loader.js" defer></script>
+    <!-- Scripts generales -->
+    <script src="/assets/js/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="bg-hero"></div>
 
-		<!-- Optimize images for lazy loading -->
-		<script>
-			document.addEventListener('DOMContentLoaded', function() {
-				[...document.querySelectorAll('img')].forEach(img => {
-					if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
-				});
-			});
-		</script>
+    <!-- Optimize images for lazy loading -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        [...document.querySelectorAll("img")].forEach((img) => {
+          if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
+        });
+      });
+    </script>
 
-		<!-- Header será rellenado -->
-		<header class="site-header"></header>
+    <!-- Header será rellenado -->
+    <header class="site-header"></header>
 
-		<main>
-			<section class="hero section">
-				<div class="hero-content">
-					<sl class="sl-icon white"></sl>
-					<h1 class="gradient-text">
-						Innovación en Add-ons de Minecraft Bedrock
-					</h1>
-					<p class="lead">
-						Creamos herramientas, librerías y guías prácticas para
-						que desarrolles add-ons con calidad profesional.
-					</p>
-					<div class="cta">
-						<a
-							class="btn btn-primary"
-							href="https://youtube.com/@ScriptLabs"
-							target="_blank"
-							rel="noopener"
-							>YouTube</a>
-						<a
-							class="btn btn-ghost"
-							href="https://discord.gg/BFG3T8MBWN"
-							target="_blank"
-							rel="noopener"
-							>Discord</a>
-					</div>
-				</div>
-			</section>
+    <main>
+      <section class="hero section">
+        <div class="hero-content">
+          <sl class="sl-icon white"></sl>
+          <h1 class="gradient-text">
+            Innovación en Add-ons de Minecraft Bedrock
+          </h1>
+          <p class="lead">
+            Creamos herramientas, librerías y guías prácticas para que
+            desarrolles add-ons con calidad profesional.
+          </p>
+          <div class="cta">
+            <a
+              class="btn btn-primary"
+              href="https://youtube.com/@ScriptLabs"
+              target="_blank"
+              rel="noopener"
+              >YouTube</a
+            >
+            <a
+              class="btn btn-ghost"
+              href="https://discord.gg/BFG3T8MBWN"
+              target="_blank"
+              rel="noopener"
+              >Discord</a
+            >
+          </div>
+        </div>
+      </section>
 
-			<section class="section features">
-				<h2 class="section-title">Qué hacemos</h2>
-				<div class="grid-3">
-					<div class="feature card glass">
-						<div class="icon">⚙️</div>
-						<h3>Herramientas</h3>
-						<p>Utilidades enfocadas a novatos y creadores avanzados.</p>
-					</div>
-					<div class="feature card glass">
-						<div class="icon">🧩</div>
-						<h3>Add-ons</h3>
-						<p>Proyectos listos para jugar y estudiar como referencia.</p>
-					</div>
-					<div class="feature card glass">
-						<div class="icon">🎓</div>
-						<h3>Tutoriales</h3>
-						<p>Guías paso a paso y videos integrados desde nuestro canal.</p>
-					</div>
-				</div>
-			</section>
+      <section class="section features">
+        <h2 class="section-title">Qué hacemos</h2>
+        <div class="grid-3">
+          <div class="feature card glass">
+            <div class="icon">⚙️</div>
+            <h3>Herramientas</h3>
+            <p>Utilidades enfocadas a novatos y creadores avanzados.</p>
+          </div>
+          <div class="feature card glass">
+            <div class="icon">🧩</div>
+            <h3>Add-ons</h3>
+            <p>Proyectos listos para jugar y estudiar como referencia.</p>
+          </div>
+          <div class="feature card glass">
+            <div class="icon">🎓</div>
+            <h3>Tutoriales</h3>
+            <p>Guías paso a paso y videos integrados desde nuestro canal.</p>
+          </div>
+        </div>
+      </section>
 
-			<section class="section cta-final">
-				<h2 class="section-title gradient-text">Únete a la comunidad</h2>
-				<p>Comparte dudas, recibe feedback y colabora en proyectos.</p>
-				<a
-					class="btn btn-primary"
-					href="https://discord.gg/BFG3T8MBWN"
-					target="_blank"
-					rel="noopener"
-					>Entrar a Discord</a>
-			</section>
-		</main>
+      <section class="section cta-final">
+        <h2 class="section-title gradient-text">Únete a la comunidad</h2>
+        <p>Comparte dudas, recibe feedback y colabora en proyectos.</p>
+        <a
+          class="btn btn-primary"
+          href="https://discord.gg/BFG3T8MBWN"
+          target="_blank"
+          rel="noopener"
+          >Entrar a Discord</a
+        >
+      </section>
+    </main>
 
-		<!-- Footer será rellenado -->
-		<footer class="site-footer"></footer>
+    <!-- Footer será rellenado -->
+    <footer class="site-footer"></footer>
 
-		<script src="/assets/js/utils/svg-finder.js"></script>
-	</body>
+    <script type="module" src="/assets/js/utils/svg-bootstrap.js"></script>
+  </body>
 </html>

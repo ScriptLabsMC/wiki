@@ -1,0 +1,42 @@
+name: Generate Manifests
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install deps (none required)
+        run: python -m pip install --upgrade pip
+
+      - name: Run manifest generator
+        run: python tools/generate_manifests.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet -- templates/index.json components/index.json; then
+            git add templates/index.json components/index.json
+            git commit -m "chore: regenerate manifests"
+            git push
+          else
+            echo "No manifest changes"
+          fi

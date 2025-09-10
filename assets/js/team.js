@@ -1,7 +1,8 @@
 const WORKER = "https://team.anthonyuribe3456.workers.dev";
 
 function imgOrDefault(url) {
-  if (!url || url === "null" || url === "undefined") return "/assets/img/svg/person.svg";
+  if (!url || url === "null" || url === "undefined")
+    return "/assets/img/svg/person.svg";
   return url;
 }
 
@@ -34,15 +35,21 @@ function showOverview(member) {
 async function loadTeam() {
   try {
     const res = await fetch(`${WORKER}/team`);
-    if (!res.ok) { console.error("Error fetching team:", res.status); return; }
+    if (!res.ok) {
+      console.error("Error fetching team:", res.status);
+      return;
+    }
 
     const team = await res.json();
     const container = document.querySelector(".grid-3.team");
-    if (!container) { console.error("Container not found"); return; }
+    if (!container) {
+      console.error("Container not found");
+      return;
+    }
 
     container.innerHTML = "";
 
-    team.forEach(member => {
+    team.forEach((member) => {
       const card = document.createElement("div");
       card.className = "card glass person";
 
@@ -66,8 +73,9 @@ async function loadTeam() {
       <a href="/pages/misc/form.html" style="color: var(--primary);"><strong>formulario</strong></a>.</p>
     `;
     container.appendChild(ctaCard);
-
-  } catch (e) { console.error("Error loading team:", e); }
+  } catch (e) {
+    console.error("Error loading team:", e);
+  }
 }
 
 window.addEventListener("load", loadTeam);

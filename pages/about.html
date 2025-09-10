@@ -1,74 +1,99 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — ScriptLabs</title>
-  <meta name="description" content="Conoce la misión, visión y equipo de ScriptLabs." />
-  <link rel="icon" href="/assets/img/logo.png" type="image/svg+xml" />
-  <!-- Preconnect and preload for fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="/assets/css/styles.css" />
-  <link rel="stylesheet" href="/assets/css/styles.css" media="all" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" media="all" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About — ScriptLabs</title>
+    <meta
+      name="description"
+      content="Conoce la misión, visión y equipo de ScriptLabs."
+    />
+    <link rel="icon" href="/assets/img/logo.png" type="image/svg+xml" />
+    <!-- Preconnect and preload for fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" media="all" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+      media="all"
+    />
 
-  <!-- Preload componentes -->
-  <link rel="preload" href="/components/nav.html" as="fetch" crossorigin="anonymous" />
-  <link rel="preload" href="/components/footer.html" as="fetch" crossorigin="anonymous" />
+    <!-- Preload componentes -->
+    <link
+      rel="preload"
+      href="/components/nav.html"
+      as="fetch"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/components/footer.html"
+      as="fetch"
+      crossorigin="anonymous"
+    />
 
-  <!-- Preload hero image for faster LCP -->
-  <link rel="preload" as="image" href="/assets/img/logo.png" imagesrcset="/assets/img/logo.png 1x" />
+    <!-- Preload hero image for faster LCP -->
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/img/logo.png"
+      imagesrcset="/assets/img/logo.png 1x"
+    />
 
-  <!-- Cargar loader primero -->
-  <script src="/components/loader.js" defer></script>
-  <script src="/assets/js/scripts.js" defer></script>
-</head>
-<body>
-  <div class="bg-hero"></div>
-  <header class="site-header"></header>
+    <!-- Cargar loader primero -->
+    <script src="/components/loader.js" defer></script>
+    <script src="/assets/js/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="bg-hero"></div>
+    <header class="site-header"></header>
 
-  <main class="section narrow">
-    <h1 class="gradient-text">Sobre ScriptLabs</h1>
-    <p>
-      Impulsamos el desarrollo de Add-ons de Minecraft Bedrock combinando ingeniería y diseño. 
-      Nuestro objetivo es eliminar fricción y acelerar el aprendizaje.
-    </p>
+    <main class="section narrow">
+      <h1 class="gradient-text">Sobre ScriptLabs</h1>
+      <p>
+        Impulsamos el desarrollo de Add-ons de Minecraft Bedrock combinando
+        ingeniería y diseño. Nuestro objetivo es eliminar fricción y acelerar el
+        aprendizaje.
+      </p>
 
-    <div class="grid-2 team">
-      <div class="card glass">
-        <h3>Misión</h3>
-        <p>
-          Crear herramientas y recursos abiertos para que cualquiera pueda construir add-ons de calidad.
-        </p>
+      <div class="grid-2 team">
+        <div class="card glass">
+          <h3>Misión</h3>
+          <p>
+            Crear herramientas y recursos abiertos para que cualquiera pueda
+            construir add-ons de calidad.
+          </p>
+        </div>
+        <div class="card glass">
+          <h3>Visión</h3>
+          <p>
+            Ser la referencia hispana en ingeniería de add-ons, con comunidad
+            activa y proyectos de impacto.
+          </p>
+        </div>
       </div>
-      <div class="card glass">
-        <h3>Visión</h3>
-        <p>
-          Ser la referencia hispana en ingeniería de add-ons, con comunidad activa y proyectos de impacto.
-        </p>
+
+      <h2 class="section-title">Equipo</h2>
+      <div class="grid-3 team">
+        <!-- Aquí team.js llenará dinámicamente las tarjetas -->
       </div>
-    </div>
+    </main>
 
-    <h2 class="section-title">Equipo</h2>
-    <div class="grid-3 team">
-      <!-- Aquí team.js llenará dinámicamente las tarjetas -->
-    </div>
-  </main>
+    <footer class="site-footer"></footer>
 
-  <footer class="site-footer"></footer>
+    <!-- Script que carga dinámicamente el equipo -->
+    <script src="/assets/js/team.js" defer></script>
+    <script type="module" src="/assets/js/utils/svg-bootstrap.js"></script>
 
-  <!-- Script que carga dinámicamente el equipo -->
-  <script src="/assets/js/team.js" defer></script>
-  <script src="/assets/js/utils/svg-finder.js" defer></script>
-
-  <!-- Optimize images for lazy loading -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      [...document.querySelectorAll('img')].forEach(img => {
-        if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+    <!-- Optimize images for lazy loading -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        [...document.querySelectorAll("img")].forEach((img) => {
+          if (!img.hasAttribute("loading")) img.setAttribute("loading", "lazy");
+        });
       });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
