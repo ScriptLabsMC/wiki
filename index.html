@@ -183,7 +183,7 @@
     <link rel="stylesheet" href="/assets/css/styles.css" media="all" defer />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
-      rel="stylesheet"
+      rel="stylesheet preconnect"
       media="all"
       defer
     />
@@ -214,6 +214,11 @@
     <script src="/components/loader.js" defer></script>
     <!-- Scripts generales -->
     <script src="/assets/js/scripts.js" defer></script>
+    <link rel="preload" href="/assets/js/utils/svg-colors.js" as="script" />
+    <link rel="preload" href="/assets/js/utils/svg-finder.js" as="script" />
+    <link rel="preload" href="/assets/js/utils/svgs.js" as="script" />
+    <link rel="preload" href="/assets/js/utils/svgx-finder.js" as="script" />
+    <link rel="preload" href="/assets/js/utils/svg-bootstrap.js" as="script" />
   </head>
   <body>
     <div class="bg-hero"></div>
@@ -297,6 +302,10 @@
     <!-- Footer será rellenado -->
     <footer class="site-footer"></footer>
 
-    <script type="module" src="/assets/js/utils/svg-bootstrap.js" defer></script>
+    <script
+      type="module"
+      src="/assets/js/utils/svg-bootstrap.js"
+      defer
+    ></script>
   </body>
 </html>
