@@ -3,6 +3,105 @@
 <!doctype html>
 <html lang="es">
 	<head>
+		<!-- Critical CSS inlined for faster first paint -->
+		<style>
+			:root {
+				--bg: #0b0f14;
+				--card: rgba(255, 255, 255, 0.06);
+				--border: rgba(255, 255, 255, 0.12);
+				--text: #dbe5ff;
+				--muted: #9fb0d0;
+				--primary: #08ffc8;
+				--accent1: #00a2ff;
+				--accent2: #7a00ff;
+				--radius: 16px;
+				--shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+				--sl-grd: linear-gradient(135deg, var(--accent1), var(--accent2) 50%, var(--primary));
+			}
+			html, body { height: 100%; }
+			body {
+				margin: 0;
+				font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+				color: var(--text);
+				background: var(--bg);
+				line-height: 1.6;
+			}
+			.bg-hero {
+				position: fixed;
+				inset: 0;
+				z-index: -1;
+				background: radial-gradient(1200px 600px at 20% 10%, rgba(0, 162, 255, 0.2), transparent 60%),
+					radial-gradient(1000px 600px at 80% 20%, rgba(122, 0, 255, 0.18), transparent 60%),
+					radial-gradient(800px 500px at 50% 80%, rgba(8, 255, 200, 0.16), transparent 60%);
+				filter: blur(40px) saturate(120%);
+				animation: float 20s ease-in-out infinite alternate;
+			}
+			@keyframes float {
+				from { transform: translateY(-2%); }
+				to { transform: translateY(2%); }
+			}
+			.site-header {
+				position: sticky;
+				top: 0;
+				z-index: 50;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 14px 20px;
+				backdrop-filter: saturate(130%) blur(8px);
+				background: linear-gradient(180deg, rgba(11, 15, 20, 0.9), rgba(11, 15, 20, 0.65));
+				border-bottom: 1px solid var(--border);
+			}
+			.hero.section {
+				display: grid;
+				grid-template-columns: 1.1fr 0.9fr;
+				gap: 28px;
+				align-items: center;
+				padding: 30px 20px;
+			}
+			.hero-content h1 {
+				font-size: 40px;
+				margin: 0.2em 0;
+			}
+			.gradient-text {
+				background: linear-gradient(90deg, var(--accent1), var(--accent2), var(--primary));
+				-webkit-background-clip: text;
+				background-clip: text;
+				color: transparent;
+			}
+			.lead { color: var(--muted); max-width: 760px; }
+			.btn {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				gap: 8px;
+				padding: 10px 14px;
+				border-radius: 12px;
+				text-decoration: none;
+				border: 1px solid var(--border);
+			}
+			.btn-primary {
+				background: linear-gradient(135deg, var(--accent1), var(--accent2) 50%, var(--primary));
+				color: white;
+				border: 0;
+				box-shadow: 0 8px 24px rgba(0, 162, 255, 0.25);
+			}
+			.btn-ghost { background: transparent; color: var(--text); }
+			.section-title { font-size: 28px; margin: 0 0 16px; }
+			.grid-3 {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 16px;
+			}
+			.feature.card.glass {
+				background: var(--card);
+				border: 1px solid var(--border);
+				border-radius: var(--radius);
+				padding: 18px;
+				box-shadow: var(--shadow);
+				backdrop-filter: blur(8px) saturate(120%);
+			}
+		</style>
 		<meta charset="utf-8" />
 		<meta
 			name="viewport"
@@ -34,19 +133,15 @@
 		<meta
 			property="og:type"
 			content="website" />
-		<link
-			rel="stylesheet"
-			href="/assets/css/styles.css" />
-		<link
-			rel="preconnect"
-			href="https://fonts.googleapis.com" />
-		<link
-			rel="preconnect"
-			href="https://fonts.gstatic.com"
-			crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
-			rel="stylesheet" />
+		<!-- Preconnect and preload for fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="preload" as="style" href="/assets/css/styles.css" />
+		<link rel="stylesheet" href="/assets/css/styles.css" media="all" />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" media="all" />
+
+		<!-- Preload hero image for faster LCP -->
+		<link rel="preload" as="image" href="/assets/img/logo.png" imagesrcset="/assets/img/logo.png 1x" />
 
 		<!-- Preload componentes -->
 		<link
@@ -67,6 +162,15 @@
 	</head>
 	<body>
 		<div class="bg-hero"></div>
+
+		<!-- Optimize images for lazy loading -->
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				[...document.querySelectorAll('img')].forEach(img => {
+					if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+				});
+			});
+		</script>
 
 		<!-- Header será rellenado -->
 		<header class="site-header"></header>
