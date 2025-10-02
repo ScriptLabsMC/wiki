@@ -8,30 +8,38 @@ import { useSvgReplacement } from "./hooks/useSvgReplacement";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// Metadata se mueve a una variable normal ya que no se puede usar export en Client Components
-const metadata = {
-  title: {
-    default: 'ScriptLabs — Innovación en Add-ons de Minecraft Bedrock',
-    template: '%s | ScriptLabs'
-  },
-  description: 'Equipo de desarrolladores de Add-ons para Minecraft Bedrock. Herramientas, librerías y tutoriales para ayudarte a crear tus propios add-ons.',
-  icons: {
-    icon: '/src/app/favicon.ico'
-  }
-}
-
 export default function RootLayout({ children }) {
 	useSvgReplacement();
 
 	return (
 		<html lang="es">
 			<head>
-				<title>{metadata.title.default}</title>
-				<meta name="description" content={metadata.description} />
-				<meta name="theme-color" content="#08FFC8" />
-				<meta name="msapplication-TileColor" content="#08FFC8" />
-				<meta name="google-site-verification" content="SlSXf_kb4xBiFHn_nZW2jLEJ9rSz20qwKeYZAHZIAOk" />
-				
+				<title>
+					ScriptLabs — Innovación en Add-ons de Minecraft Bedrock
+				</title>
+				<meta
+					name="description"
+					content="Equipo de desarrolladores de Add-ons para Minecraft Bedrock. Herramientas, librerías y tutoriales para ayudarte a crear tus propios add-ons."
+				/>
+				<meta
+					name="theme-color"
+					content="#08FFC8"
+				/>
+				<meta
+					name="msapplication-TileColor"
+					content="#08FFC8"
+				/>
+				<meta
+					name="google-site-verification"
+					content="SlSXf_kb4xBiFHn_nZW2jLEJ9rSz20qwKeYZAHZIAOk"
+				/>
+
+				{/* ¡IMPORTANTE! Agrega el favicon aquí */}
+				<link
+					rel="icon"
+					href="/favicon.ico"
+				/>
+
 				{/* Structured Data / Schema.org */}
 				<script
 					type="application/ld+json"
@@ -39,10 +47,11 @@ export default function RootLayout({ children }) {
 						__html: JSON.stringify({
 							"@context": "https://schema.org",
 							"@type": "Organization",
-							"name": "ScriptLabs",
-							"url": "https://scriptlabsmc.vercel.app",
-							"description": "Equipo de desarrolladores de Add-ons para Minecraft Bedrock",
-							"sameAs": [
+							name: "ScriptLabs",
+							url: "https://scriptlabsmc.vercel.app",
+							description:
+								"Equipo de desarrolladores de Add-ons para Minecraft Bedrock",
+							sameAs: [
 								"https://youtube.com/@ScriptLabs",
 								"https://discord.gg/BFG3T8MBWN"
 							]
@@ -58,4 +67,4 @@ export default function RootLayout({ children }) {
 			</body>
 		</html>
 	);
-	}
+}
