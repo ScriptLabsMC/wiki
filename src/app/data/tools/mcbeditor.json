@@ -1,0 +1,30 @@
+{
+  "slug": "mcbeditor",
+  "title": "MCBE Script Editor",
+  "description": "Monaco Editor con tipos dinámicos offline.",
+  "icon": "⚙️",
+  "category": "Editores",
+  "url": "https://mcbeditor.vercel.app/",
+  "docsUrl": "/docs/mcbeditor",
+  "featured": true,
+  "tags": ["editor",
+    "typescript",
+    "offline"],
+  "author": "a.j.r._.uribe",
+  "version": "1.4.2",
+  "license": "MIT",
+  "repository": "https://github.com/ajr-uribe/bedrock-script-editor-mobile",
+  "created": "2024-01-15",
+  "updated": "2024-03-20",
+  "features": [
+    "Autocompletado inteligente con TypeScript",
+    "Funciona completamente offline como PWA",
+    "Syntax highlighting para JavaScript y TypeScript",
+    "Integración con la API de Minecraft Bedrock",
+    "Detección de errores en tiempo real"
+  ],
+  "requirements": [
+    "Navegador moderno (Chrome, Firefox, Edge)",
+    "Conexión a internet para la primera carga"
+  ]
+}

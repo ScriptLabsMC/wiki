@@ -1,0 +1,15 @@
+{
+  "slug": "mcbeditor",
+  "title": "MCBEDITOR v1.4.2",
+  "description": "Un editor de scripts JS adaptado con funcionalidades para hacer tu desarrollo de add-ons mucho más fácil.",
+  "icon": "🚀",
+  "category": "Tools",
+  "difficulty": "N/A",
+  "author": "a.j.r._.uribe",
+  "order": 1,
+  "tags": ["tools"],
+  "created": "03-04-2025",
+  "updated": "1-10-2025",
+  "content": "# Herramientas de Desarrollo \n\n **MCBEDITOR** es un editor de codigo adaptado para ayudarte a escribir más fácilmente codijo Javascript para tus addons y mejorar tu productividad.",
+  "resources": []
+}
