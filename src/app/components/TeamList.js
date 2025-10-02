@@ -66,9 +66,9 @@ export default function TeamList() {
 						Hey, ¿Quieres unirte a nuestro equipo de desarrollo?
 						puedes llenar este
 						<Link
-							href="/misc/form"
+							href="/form"
 							style={{ color: "var(--primary)" }}>
-							<strong>formulario</strong>
+							<strong> formulario</strong>
 						</Link>
 						.
 					</p>
