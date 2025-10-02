@@ -39,14 +39,6 @@ export const metadata = {
     title: 'ScriptLabs — Innovación en Add-ons de Minecraft Bedrock',
     description: 'Equipo de desarrolladores de Add-ons para Minecraft Bedrock. Herramientas, librerías y tutoriales para ayudarte a crear tus propios add-ons.',
     siteName: 'ScriptLabs',
-    images: [
-      {
-        url: '/assets/img/logo.png',
-        width: 1200,
-        height: 630,
-        alt: 'ScriptLabs Logo',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -71,10 +63,10 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+	useSvgReplacement();
   return (
     <html lang="es">
       <head>
-        
         {/* Theme Color */}
         <meta name="theme-color" content="#08FFC8" />
         <meta name="msapplication-TileColor" content="#08FFC8" />
@@ -105,4 +97,4 @@ export default function RootLayout({ children }) {
       </body>
     </html>
   )
-	}
+			}
