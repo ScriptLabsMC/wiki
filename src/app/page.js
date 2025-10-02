@@ -1,11 +1,10 @@
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function Home() {
 	return (
 		<>
-		
 			<section className="hero section">
-		<SpeedInsights/>
+				<SpeedInsights />
 				<div className="hero-content">
 					<div className="sl-icon white"></div>
 					<h1 className="gradient-text">
