@@ -15,6 +15,9 @@ const metadata = {
     template: '%s | ScriptLabs'
   },
   description: 'Equipo de desarrolladores de Add-ons para Minecraft Bedrock. Herramientas, librerías y tutoriales para ayudarte a crear tus propios add-ons.',
+  icons: {
+    icon: '/src/app/favicon.ico'
+  }
 }
 
 export default function RootLayout({ children }) {
