@@ -16,7 +16,8 @@ export default function Header() {
 		{ href: "/addons", label: "Add-ons" },
 		{ href: "/tutorials", label: "Tutoriales" },
 		{ href: "/templates", label: "Plantillas" },
-		{ href: "/community", label: "Comunidad" }
+		{ href: "/community", label: "Comunidad" },
+		{ href: "/docs", label: "Docs" }
 	];
 
 	// Determinar si estamos en home
