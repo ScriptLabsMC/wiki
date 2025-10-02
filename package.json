@@ -1,8 +1,8 @@
 {
   "name": "wiki-nxt",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.1.0",
   "scripts": {
+    "build": "next build",
     "dev": "next dev",
     "sync": "if rsync -av --delete --exclude node_modules --exclude .next ~/storage/shared/www/wiki-nxt/* ~/ --progress; then echo -e '\\033[1;32m✅ Sincronización exitosa\\033[0m'; else echo -e '\\033[1;31m❌ Error en sincronización\\033[0m'; exit 1; fi",
     "dev-sync": "echo -e '\\033[1;36m🔄 Iniciando proceso de desarrollo sincronizado...\\033[0m' && npm run sync && echo -e '\\033[1;35m🚀 Iniciando servidor dev...\\033[0m' && npm run dev || echo -e '\\033[1;31m💥 Error al iniciar el servidor\\033[0m'"
@@ -10,6 +10,9 @@
   "dependencies": {
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.5.4"
+    "next": "15.5.4",
+    "react-markdown": "^9.0.1",
+    "react-syntax-highlighter": "^15.5.0",
+    "remark-gfm": "^4.0.0"
   }
 }
