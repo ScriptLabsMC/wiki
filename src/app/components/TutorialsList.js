@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const VIDEOS_API = "https://tu-worker.cloudflareworkers.com";
+const VIDEOS_API = "https://getvids.anthonyuribe3456.workers.dev/";
 
 export default function TutorialsList() {
 	const [videos, setVideos] = useState([]);
