@@ -80,7 +80,7 @@ export default function TutorialsList() {
 					filteredVideos.map((video, index) => (
 						<article
 							key={index}
-							className="card glass"
+							className="card glass vid"
 							data-level={video.level || "no-category"}>
 							<h3>{video.title}</h3>
 							{video.thumbnail && (
