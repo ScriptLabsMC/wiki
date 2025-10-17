@@ -111,14 +111,14 @@ export default async function ToolPage({ params }) {
 				<footer className="template-footer">
 					<div className="footer-grid">
 						{tool.license && (
-							<div className="footer-item">
+							<div className="footer-item card glass">
 								<h3>📜 Licencia</h3>
 								<p>{tool.license}</p>
 							</div>
 						)}
 
 						{tool.repository && (
-							<div className="footer-item">
+							<div className="footer-item card glass">
 								<h3>💻 Repositorio</h3>
 								<a
 									href={tool.repository}
