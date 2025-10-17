@@ -1,0 +1,39 @@
+{
+  "slug": "manifest-generator",
+  "title": "Minecraft Bedrock Manifest Generator",
+  "description": "Generador de manifests para add-ons de Minecraft Bedrock Edition con validación y preview en tiempo real.",
+  "icon": "📦",
+  "category": "Generadores",
+  "url": "/tools/manifest-generator",
+  "docsUrl": "/docs/manifest-generator",
+  "featured": true,
+  "tags": [
+    "minecraft",
+    "bedrock",
+    "manifest",
+    "addon",
+    "behavior-pack",
+    "resource-pack"
+  ],
+  "author": "a.j.r._.uribe",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": "https://github.com/tu-usuario/manifest-generator",
+  "created": "2025-10-16",
+  "updated": "2025-10-16",
+  "features": [
+    "Generación de manifests para Behavior Packs y Resource Packs",
+    "UUIDs automáticos con validación",
+    "Soporte para todas las versiones de Minecraft Bedrock",
+    "Configuración de dependencias entre packs",
+    "Preview JSON en tiempo real con syntax highlighting",
+    "Validación según formato oficial de Mojang",
+    "Exportación directa a manifest.json",
+    "Templates predefinidos para diferentes tipos de add-ons",
+    "Soporte para módulos (data, resources, scripts, etc.)"
+  ],
+  "requirements": [
+    "Navegador moderno (Chrome, Firefox, Edge)",
+    "Conocimiento básico de add-ons de Minecraft Bedrock"
+  ]
+}

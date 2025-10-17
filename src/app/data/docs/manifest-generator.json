@@ -1,0 +1,26 @@
+{
+  "slug": "manifest-generator",
+  "title": "Manifest Generator v1.0.0",
+  "description": "Generador interactivo de manifests para add-ons de Minecraft Bedrock Edition con validación automática.",
+  "icon": "📦",
+  "category": "Tools",
+  "difficulty": "N/A",
+  "author": "a.j.r._.uribe",
+  "order": 2,
+  "tags": ["tools", "generator", "manifest"],
+  "created": "16-10-2025",
+  "updated": "16-10-2025",
+  "content": "# Manifest Generator\n\n**Manifest Generator** es una herramienta que te permite crear manifests para tus behavior packs y resource packs de Minecraft Bedrock de forma rápida y sin errores.\n\n## ¿Qué hace?\n\nGenera automáticamente archivos `manifest.json` válidos con:\n- UUIDs únicos generados automáticamente\n- Configuración de versiones de Minecraft\n- Dependencias entre packs\n- Módulos (data, resources, scripts)\n- Validación en tiempo real\n\n## ¿Cómo usar?\n\n1. **Selecciona el tipo de pack** (Behavior Pack o Resource Pack)\n2. **Completa la información básica** (nombre, descripción, autor)\n3. **Configura las versiones** de tu pack y Minecraft\n4. **Añade módulos y dependencias** si es necesario\n5. **Descarga el manifest.json** generado\n\n## Campos principales\n\n### Header\n- **name**: Nombre de tu add-on\n- **description**: Descripción breve\n- **uuid**: Se genera automáticamente\n- **version**: Versión de tu pack [major, minor, patch]\n- **min_engine_version**: Versión mínima de Minecraft requerida\n\n### Modules\nDefine qué tipo de contenido incluye tu pack:\n- **data**: Para behavior packs\n- **resources**: Para resource packs\n- **script**: Para packs con GameTest Framework\n\n### Dependencies\nSi tu pack depende de otro (ejemplo: un behavior pack que necesita un resource pack específico).\n\n## Tips\n\n- Los UUIDs deben ser únicos para cada pack y módulo\n- Usa versiones semánticas (1.0.0, 1.1.0, etc.)\n- Revisa la compatibilidad de versiones con tu target de Minecraft\n- Guarda tu manifest.json en la raíz de tu pack\n\n## Estructura típica\n\n```\nmi_addon_BP/\n├── manifest.json  ← Archivo generado\n├── pack_icon.png\n└── ...\n```",
+  "resources": [
+    {
+      "title": "Documentación oficial de Manifests",
+      "url": "https://learn.microsoft.com/en-us/minecraft/creator/reference/content/addonsreference/examples/addonmanifest",
+      "type": "documentation"
+    },
+    {
+      "title": "Formato UUID",
+      "url": "https://www.uuidgenerator.net/",
+      "type": "tool"
+    }
+  ]
+}

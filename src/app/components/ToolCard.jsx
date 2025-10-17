@@ -33,6 +33,11 @@ export default function ToolCard({ tool }) {
 						Abrir
 					</a>
 				)}
+				<Link 
+					className="btn btn-ghost" 
+					href={`/tools/${tool.slug}`}>
+					Ver más
+				</Link>
 				{tool.docsUrl && (
 					<Link className="btn btn-ghost" href={tool.docsUrl}>
 						Docs
