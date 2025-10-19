@@ -203,7 +203,7 @@ export default function AIChatPage() {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: "llama-3.1-8b-instant",
+          model: "llama-3.3-70b-versatile",
           messages: [{
             role: "system",
             content: "Eres un asistente útil y amigable. Responde de manera concisa y clara. Cuando incluyas código, usa bloques de código con markdown especificando el lenguaje. Por ejemplo: ```javascript\n// tu código aquí\n```"
