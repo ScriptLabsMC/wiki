@@ -1,0 +1,31 @@
+{
+  "slug": "ai-chat",
+  "title": "AI Chat con Groq",
+  "description": "Un sistema de chat inteligente que utiliza modelos de lenguaje de Groq para asistencia en desarrollo de add-ons y programación.",
+  "icon": "🤖",
+  "category": "Tools",
+  "difficulty": "N/A",
+  "author": "a.j.r._.uribe",
+  "order": 2,
+  "tags": ["tools", "ai", "chat", "groq", "experimental"],
+  "created": "03-04-2025",
+  "updated": "1-10-2025",
+  "content": "# AI Chat con Groq \n\n**AI Chat** es un sistema de chat inteligente que utiliza la API de Groq para proporcionar asistencia en tiempo real para desarrollo de add-ons de Minecraft, programación JavaScript, y más.\n\n## ⚠️ ADVERTENCIA IMPORTANTE\n\n**ESTA HERRAMIENTA ES EXPERIMENTAL Y EL CÓDIGO GENERADO DEBE SER VERIFICADO**\n\n- 🤖 **No confíes ciegamente** en el código proporcionado por la IA\n- 🔍 **Siempre verifica** y prueba el código antes de usarlo en producción\n- 🐛 **Puede contener errores**, vulnerabilidades o malas prácticas\n- 💬 **Propósito conversacional** - no reemplaza la revisión humana\n- 🚫 **No apto para código crítico** sin supervisión experta\n\n## Características Principales\n\n### 🤖 Asistencia Inteligente\n- Respuestas rápidas usando modelos Llama 3.1\n- Especializado en desarrollo de Minecraft Bedrock\n- Soporte para código JavaScript y TypeScript\n\n### 💾 Gestión de Conversaciones\n- Historial de últimos 30 mensajes\n- Almacenamiento local en tu navegador\n- Timestamps en todos los mensajes\n\n### 🔧 Syntax Highlighting\n- Resaltado de código automático\n- Soporte para múltiples lenguajes de programación\n- Tema VS Dark para mejor legibilidad\n- Botón de copiar código con un click\n\n### 🔐 Seguridad y Privacidad\n- API Key almacenada localmente\n- Conversaciones privadas\n- Sin almacenamiento en servidores externos\n\n## Configuración\n\n1. Obtén tu API Key gratuita en [Groq Console](https://console.groq.com)\n2. Ingresa la clave en el formulario de configuración\n3. ¡Comienza a chatear!\n\n## Uso Recomendado\n\n- Para código JavaScript: usa bloques ```javascript\n- Para preguntas técnicas sobre Minecraft Bedrock\n- Asistencia con problemas de programación\n- Generación de ejemplos de código\n\n## Modelos Disponibles\n\n- **Llama 3.1 8B Instant**: Rápido y eficiente\n- **Modelos personalizados**: Soporte para fine-tuning\n\n*Nota: El uso está sujeto a los límites y políticas de Groq API.*",
+  "resources": [
+    {
+      "title": "Groq Console",
+      "url": "https://console.groq.com",
+      "type": "external"
+    },
+    {
+      "title": "Documentación de Groq API",
+      "url": "https://docs.groq.com",
+      "type": "external"
+    },
+    {
+      "title": "Ejemplos de uso de la API",
+      "url": "https://github.com/groq/groq-api-examples",
+      "type": "external"
+    }
+  ]
+}
