@@ -1,4 +1,4 @@
-import { getTemplateBySlug } from "../../../lib/database";
+import { getTemplateBySlug } from "../../lib/database";
 
 export async function generateMetadata({ params }) {
   const template = await getTemplateBySlug(params.slug);
