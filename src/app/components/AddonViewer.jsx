@@ -61,6 +61,7 @@ export default function AddonViewer({ addon }) {
           <a 
             href={downloadUrl}
             className="btn btn-primary btn-large"
+            target='self'
             rel="noopener noreferrer"
           >
             📥 Descargar Add-on
