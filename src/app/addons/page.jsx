@@ -1,5 +1,11 @@
 import AddonsList from "../components/AddonsList";
 
+export const metadata = {
+	title: "ScriptLabs | Add-ons Page",
+	description: "Explore, download, and learn about our add-ons.",
+	keywords: "add-ons, Minecraft, projects",
+};
+
 export default function Addons() {
 	return (
 		<div className="section">

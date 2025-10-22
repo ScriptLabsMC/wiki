@@ -1,3 +1,9 @@
+export const metadata = {
+	title: 'ScriptLabs | Community Page',
+	description: 'Join the Minecraft community and share your projects.',
+	keywords: 'community, Minecraft, projects',
+};
+
 export default function Community() {
 	return (
 		<div className="section narrow">

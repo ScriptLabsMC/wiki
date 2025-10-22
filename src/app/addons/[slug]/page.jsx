@@ -2,6 +2,12 @@ import { notFound } from "next/navigation";
 import { getAddonBySlug, getAllAddons } from "../../lib/addons-database";
 import AddonViewer from "../../components/AddonViewer";
 
+export const metadata = {
+	title: "ScriptLabs | Addon Details",
+	description: "Detailed view of a specific Minecraft add-on.",
+	keywords: "addon, details, Minecraft"
+};
+
 // Generar metadata dinámica
 export async function generateMetadata({ params }) {
 	const addon = await getAddonBySlug(params.slug);

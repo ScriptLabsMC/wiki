@@ -1,3 +1,9 @@
+export const metadata = {
+	title: "ScriptLabs | Form Page",
+	description: "Submit your Minecraft add-on or feedback.",
+	keywords: "form, Minecraft, feedback"
+};
+
 export default function Form() {
 	return (
 		<div className="section">

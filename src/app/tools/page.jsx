@@ -1,6 +1,12 @@
 import { getTools } from "../lib/database";
 import ToolCard from "../components/ToolCard";
 
+export const metadata = {
+	title: "ScriptLabs | Tools Page",
+	description: "Explore various tools for Minecraft development.",
+	keywords: "tools, Minecraft, development"
+};
+
 export default async function ToolsPage() {
 	const tools = await getTools();
 

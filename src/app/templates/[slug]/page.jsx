@@ -2,6 +2,12 @@ import { notFound } from "next/navigation";
 import { getTemplateBySlug } from "../../lib/database";
 import MarkdownRenderer from "../../components/MarkdownRenderer";
 
+export const metadata = {
+  title: "ScriptLabs | Template Details",
+  description: "Detailed view of a specific Minecraft template.",
+  keywords: "template, details, Minecraft",
+};
+
 export default async function TemplatePage({ params }) {
   const template = await getTemplateBySlug(params.slug);
 

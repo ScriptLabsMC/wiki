@@ -1,5 +1,11 @@
 import TeamList from "../components/TeamList";
 
+export const metadata = {
+	title: "ScriptLabs | About ScriptLabs",
+	description: "Learn about ScriptLabs and our mission.",
+	keywords: "about, ScriptLabs, mission",
+};
+
 export default function About() {
 	return (
 		<div className="section narrow">

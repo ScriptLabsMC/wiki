@@ -1,6 +1,12 @@
 import { getDocs } from "../lib/database";
 import DocCard from "../components/DocCard";
 
+export const metadata = {
+	title: "ScriptLabs | Documentation Overview",
+	description: "Overview of all documentation available for Minecraft.",
+	keywords: "documentation, Minecraft, overview"
+};
+
 export default async function DocsPage() {
 	const docs = await getDocs();
 

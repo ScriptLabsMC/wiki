@@ -1,5 +1,11 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
+export const metadata = {
+	title: "ScriptLabs | Home Page",
+	description: "Welcome to the Minecraft add-ons hub.",
+	keywords: "home, Minecraft, add-ons",
+};
+
 export default function Home() {
 	return (
 		<>

@@ -1,6 +1,12 @@
 import { getTemplates } from "../lib/database";
 import TemplateCard from "../components/TemplateCard";
 
+export const metadata = {
+	title: "ScriptLabs | Templates Page",
+	description: "Explore templates and examples for Minecraft.",
+	keywords: "templates, examples, Minecraft"
+};
+
 export default async function TemplatesPage() {
 	const templates = await getTemplates();
 

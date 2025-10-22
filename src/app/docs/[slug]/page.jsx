@@ -3,6 +3,12 @@ import { getDocBySlug, getDocs } from "../../lib/database";
 import MarkdownRenderer from "../../components/MarkdownRenderer";
 import Link from "next/link";
 
+export const metadata = {
+	title: "ScriptLabs | Documentation Page",
+	description: "Detailed documentation for Minecraft projects.",
+	keywords: "documentation, Minecraft, projects",
+};
+
 export default async function DocPage({ params }) {
 	const doc = await getDocBySlug(params.slug);
 
