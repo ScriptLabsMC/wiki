@@ -65,7 +65,7 @@ export default function TemplateCard({ template }) {
 					paddingTop: "1rem"
 				}}>
 				<span>v{template.version}</span>
-				<span>{template.category}</span>
+				<span className="template-category">{template.category}</span>
 			</div>
 		</Link>
 	);

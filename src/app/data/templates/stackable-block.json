@@ -1,0 +1,22 @@
+{
+  "slug": "stackable-block",
+  "version": "1.0.0",
+  "license": "MIT",
+  "title": "Stackable Block Template",
+  "subtitle": "(Custom Components v2)",
+  "description": "Una plantilla de bloque stackeable utilizando Custom Components v2 para Minecraft Bedrock Edition.",
+  "category": "herramientas",
+  "difficulty": "Intermedio",
+  "author": "a.j.r._.uribe",
+  "tags": ["blocks", "javascript", "custom components", "minecraft bedrock edition"],
+"content": "./mdFiles/stackable-block.md",
+"files": [
+  {
+    "path": "BP/blocks/stackable_block.js",
+    "description": "Lógica del bloque stackeable utilizando Custom Components v2.",
+    "language": "JSON",
+    "link": "https://legacy.curseforge.com/minecraft-bedrock/scripts/stackable-blocks-template"
+  }
+],
+"updated": "22-10-2025"
+}
