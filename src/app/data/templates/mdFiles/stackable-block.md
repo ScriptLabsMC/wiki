@@ -235,4 +235,4 @@ Permission is granted to use, copy, modify, and distribute the Template, subject
 - This license is not a substitute for legal advice. If you require legally binding terms or have questions, consult a qualified attorney.
 - Questions: join [discord server](https://discord.gg/BFG3T8MBWN)
 
-By using or distributing this Template you agree to comply with these terms.
+- By using or distributing this Template you agree to comply with these terms.
