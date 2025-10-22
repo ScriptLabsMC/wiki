@@ -49,7 +49,7 @@ export default function AddonViewer({ addon }) {
               )}
               {latestFile && (
                 <div className="stat">
-                  <span className="stat-number">v{latestFile.displayName}</span>
+                  <span className="stat-number">{latestFile.displayName}</span>
                   <span className="stat-label">Versión</span>
                 </div>
               )}

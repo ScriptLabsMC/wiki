@@ -16,7 +16,7 @@ export default function ManifestGenerator() {
 			description: "",
 			uuid: "",
 			version: [1, 0, 0],
-			min_engine_version: [1, 21, 90] // Actualiza a versión más reciente
+			min_engine_version: [1, 21, 113] 
 		},
 		modules: [],
 		dependencies: [],
@@ -746,7 +746,7 @@ export default function ManifestGenerator() {
 									}}>
 									Tipo de Módulo
 								</label>
-								<select
+								<select className="module-select"
 									value={currentModule.type}
 									onChange={(e) =>
 										setCurrentModule((prev) => ({
@@ -799,7 +799,7 @@ export default function ManifestGenerator() {
 											}}>
 											Lenguaje
 										</label>
-										<select
+										<select className="module-select"
 											value={currentModule.language}
 											onChange={(e) =>
 												setCurrentModule((prev) => ({
@@ -1173,7 +1173,7 @@ export default function ManifestGenerator() {
 									}}>
 									Tipo de Dependencia
 								</label>
-								<select
+								<select className="module-select"
 									value={depType}
 									onChange={(e) => setDepType(e.target.value)}
 									style={{
@@ -1339,7 +1339,7 @@ export default function ManifestGenerator() {
 											}}>
 											Nombre del Módulo
 										</label>
-										<select
+										<select className="module-select"
 											value={currentDep.module_name}
 											onChange={(e) =>
 												setCurrentDep((prev) => ({

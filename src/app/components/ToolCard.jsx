@@ -28,7 +28,6 @@ export default function ToolCard({ tool }) {
 					<a
 						className="btn btn-primary"
 						href={tool.url}
-						target="_blank"
 						rel="noopener noreferrer">
 						Abrir
 					</a>

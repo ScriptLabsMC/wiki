@@ -1801,4 +1801,86 @@ button:focus-visible,
   background: var(--accent2);
 }
 
+/* === Estilos para selects === */
+.module-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* ==== Estilos de selects === */
+.module-select {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 600;
+  appearance: none;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover y focus */
+.module-select:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.module-select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* Flecha personalizada */
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.select-wrapper::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* Estilo de las opciones */
+.module-select option {
+  background-color: #0f1116; /* Fondo oscuro real */
+  color: var(--text);
+  font-weight: 500;
+  border: none;
+}
+
+/* En Windows/Edge el hover funciona así */
+.module-select option:hover {
+  background-color: var(--primary);
+  color: #000;
+}
+
+/* Flecha personalizada */
+.select-wrapper::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 /* --- End of modern improvements --- */
