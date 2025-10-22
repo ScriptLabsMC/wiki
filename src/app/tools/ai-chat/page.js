@@ -1,18 +1,8 @@
 "use client";
 
-import {
-  useState,
-  useRef,
-  useEffect
-} from "react";
+import { useState, useRef, useEffect } from "react";
 import hljs from 'highlight.js';
 import 'highlight.js/styles/vs2015.css'; // Tema VS Dark
-
-export const metadata = {
-  title: "ScriptLabs | AI Chat Tool",
-  description: "Chat with AI using Groq for Minecraft.",
-  keywords: "AI, chat, Groq, Minecraft"
-};
 
 export default function AIChatPage() {
   const [messages,
