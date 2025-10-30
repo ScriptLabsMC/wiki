@@ -1,10 +1,10 @@
 // app/layout.jsx
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import HeroBackground from "./components/HeroBackground";
-import ClientWrapper from "./components/ClientWrapper";
+import Header from "./components/Layout/Header";
+import Footer from "./components/Layout/Footer";
+import HeroBackground from "./components/Layout/HeroBackground";
+import ClientWrapper from "./components/Utils/ClientWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 

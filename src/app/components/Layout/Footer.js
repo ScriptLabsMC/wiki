@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCurrentYear } from "../hooks/useCurrentYear";
+import { useCurrentYear } from "../../hooks/useCurrentYear";
 
 export default function Footer() {
 	const year = useCurrentYear();

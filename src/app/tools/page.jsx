@@ -1,5 +1,5 @@
 import { getTools } from "../lib/database";
-import ToolCard from "../components/ToolCard";
+import ToolCard from "../components/Cards/ToolCard";
 
 export const metadata = {
 	title: "ScriptLabs | Tools Page",

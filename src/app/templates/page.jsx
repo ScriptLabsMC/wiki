@@ -1,5 +1,5 @@
 import { getTemplates } from "../lib/database";
-import TemplateCard from "../components/TemplateCard";
+import TemplateCard from "../components/Cards/TemplateCard";
 
 export const metadata = {
 	title: "ScriptLabs | Templates Page",

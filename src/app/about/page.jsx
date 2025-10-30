@@ -1,4 +1,4 @@
-import TeamList from "../components/TeamList";
+import TeamList from "../components/Utils/TeamList";
 
 export const metadata = {
 	title: "ScriptLabs | About ScriptLabs",
