@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useMobileMenu } from "../hooks/useMobileMenu";
+import { useMobileMenu } from "../../hooks/useMobileMenu";
 
 export default function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getAddonBySlug, getAllAddons } from "../../lib/addons-database";
-import AddonViewer from "../../components/AddonViewer";
+import AddonViewer from "../../components/Utils/AddonViewer";
 
 // Generar metadata dinámica
 export async function generateMetadata({ params }) {

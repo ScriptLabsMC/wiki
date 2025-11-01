@@ -1,5 +1,5 @@
 import { getDocs } from "../lib/database";
-import DocCard from "../components/DocCard";
+import DocCard from "../components/Cards/DocCard";
 
 export const metadata = {
 	title: "ScriptLabs | Documentation Overview",

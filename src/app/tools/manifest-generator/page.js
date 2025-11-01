@@ -1,4 +1,4 @@
-import ManifestGenerator from '../../components/ManifestGenerator';
+import ManifestGenerator from '../../components/Utils/ManifestGenerator';
 
 export const metadata = {
   title: "ScriptLabs | Manifest Generator",

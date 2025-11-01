@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getDocBySlug, getDocs } from "../../lib/database";
-import MarkdownRenderer from "../../components/MarkdownRenderer";
+import MarkdownRenderer from "../../components/Utils/MarkdownRenderer";
 import Link from "next/link";
 
 export default async function DocPage({ params }) {

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getTemplateBySlug } from "../../lib/database";
-import MarkdownRenderer from "../../components/MarkdownRenderer";
+import MarkdownRenderer from "../../components/Utils/MarkdownRenderer";
 
 export default async function TemplatePage({ params }) {
   const template = await getTemplateBySlug(params.slug);
