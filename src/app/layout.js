@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <head />
-      <body className={inter.className}>
+      <body className={`${inter.className}`}>
         <ClientWrapper>
           <HeroBackground />
           <Header />

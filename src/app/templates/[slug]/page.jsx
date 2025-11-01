@@ -116,8 +116,13 @@ export default async function TemplatePage({ params }) {
             </div>
 
             <div className="footer-item">
+              <h3>🕐 Creado</h3>
+              <p className="template-date">{template.created}</p>
+            </div>
+            
+            <div className="footer-item">
               <h3>🕐 Actualizado</h3>
-              <p className="template-date">{template.updated || template.created}</p>
+              <p className="template-date">{template.updated}</p>
             </div>
           </div>
         </footer>

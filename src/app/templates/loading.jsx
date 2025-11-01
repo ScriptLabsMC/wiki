@@ -1,12 +1,7 @@
-// src/app/templates/loading.jsx
+import Loader from '../components/loader/Loader'
+
 export default function TemplatesLoading() {
-	return (
-		<div className="section">
-			<div className="loading">
-				<h2>Cargando Plantillas</h2>
-				<div className="loader"></div>
-				<p>Buscando las mejores plantillas para ti...</p>
-			</div>
-		</div>
-	);
+  return (
+    <Loader message="Cargando Plantillas"></Loader>
+  );
 }

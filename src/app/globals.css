@@ -20,6 +20,25 @@
   );
 }
 
+.halloween {
+  --bg: #0d0a08;
+  --card: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 165, 0, 0.25);
+  --text: #f8f4e9;
+  --muted: #c4a87d;
+  --primary: #ff6b00;
+  --accent1: #8a2be2;
+  --accent2: #ff4444;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --sl-grd: linear-gradient(
+    135deg,
+    var(--accent1),
+    var(--accent2) 50%,
+    var(--primary)
+  );
+}
+
 /* =========================================
    RESET Y BASE
    ========================================= */

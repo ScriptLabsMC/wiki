@@ -1,0 +1,87 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.0 24.0" width="80px" height="80px">
+  <defs>
+    <linearGradient id="grd" x1="0%" y1="0%" x2="100%" y2="100%" spreadMethod="repeat">
+      <stop offset="0%" stop-color="#7a00ff">
+        <animate attributeName="offset" values="-1;1" dur="2.5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="33.333%" stop-color="#00a2ff">
+        <animate attributeName="offset" values="-0.666;1.333" dur="2.5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="66.666%" stop-color="#3d00ff">
+        <animate attributeName="offset" values="-0.333;1.666" dur="2.5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#7a00ff">
+        <animate attributeName="offset" values="0;2" dur="2.5s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Hexágono de fondo -->
+  <g class="border">
+    <path fill="none" stroke="url(#grd)" stroke-opacity="0.3" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"
+      d="M22.00,6.88L12.00,1.38L2.00,6.87L2.00,17.13L12.00,22.63L22.00,17.13L22.00,6.88z" />
+  </g>
+
+  <!-- Elipses animadas -->
+  <g class="atom" stroke="url(#grd)" stroke-width="0.84" stroke-linejoin="round" stroke-linecap="square" fill="none">
+    <path d="M4.97,16.31C3.99,14.72,6.35,11.50,10.24,9.12C14.12,6.74,18.06,6.10,19.03,7.69C20.01,9.28,17.65,12.50,13.76,14.88C9.88,17.26,5.94,17.90,4.97,16.31z">
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0 12 12"
+        to="360 12 12"
+        dur="3s"
+        repeatCount="indefinite"
+        calcMode="spline"
+        keySplines="0.42 0 0.58 1"
+        keyTimes="0;1" />
+    </path>
+
+    <path d="M19.03,16.31C18.06,17.90,14.12,17.26,10.24,14.88C6.35,12.50,3.99,9.28,4.97,7.69C5.94,6.10,9.88,6.74,13.76,9.12C17.65,11.50,20.01,14.72,19.03,16.31z">
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0 12 12"
+        to="360 12 12"
+        dur="3s"
+        repeatCount="indefinite"
+        calcMode="spline"
+        keySplines="0.42 0 0.58 1"
+        keyTimes="0;1" />
+    </path>
+
+    <path d="M12.00,3.75C13.86,3.75,15.38,7.44,15.38,12.00C15.38,16.56,13.86,20.25,12.00,20.25C10.14,20.25,8.63,16.56,8.63,12.00C8.63,7.44,10.14,3.75,12.00,3.75z">
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0 12 12"
+        to="360 12 12"
+        dur="3s"
+        repeatCount="indefinite"
+        calcMode="spline"
+        keySplines="0.42 0 0.58 1"
+        keyTimes="0;1" />
+    </path>
+  </g>
+
+  <!-- Código central -->
+  <g class="code" stroke="url(#grd)" fill="none">
+    <path stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"
+      d="M13.44,11.28Q15.72,11.95,13.41,12.94">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite" />
+    </path>
+
+    <path stroke-width="0.66" stroke-linejoin="round" stroke-linecap="round"
+      d="M11.62,13.50L12.37,10.88">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="0.3s" repeatCount="indefinite" />
+    </path>
+
+    <path stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"
+      d="M10.56,11.28Q8.28,11.95,10.59,12.94">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="0.6s" repeatCount="indefinite" />
+    </path>
+  </g>
+</svg>
