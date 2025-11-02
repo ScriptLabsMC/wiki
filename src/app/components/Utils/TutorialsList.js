@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Loader from"../loader/Loader"
 
 const VIDEOS_API = "https://getvids.anthonyuribe3456.workers.dev/";
 
@@ -33,7 +34,7 @@ export default function TutorialsList() {
 			: videos.filter((video) => video.level === filter);
 
 	if (loading) {
-		return <div id="loading">Cargando videos...</div>;
+		return <Loader message="Cargando Tutoriales"></Loader>;
 	}
 
 	return (

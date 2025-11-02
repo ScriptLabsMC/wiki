@@ -9,17 +9,17 @@ import ClientWrapper from "./components/Utils/ClientWrapper";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="es">
-      <head />
-      <body className={`${inter.className}`}>
-        <ClientWrapper>
-          <HeroBackground />
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </ClientWrapper>
-      </body>
-    </html>
-  );
+    return (
+        <html lang="es">
+            <head />
+            <body className={`${inter.className}`}>
+                <ClientWrapper>
+                    <HeroBackground />
+                    <Header />
+                    <main>{children}</main>
+                    <Footer />
+                </ClientWrapper>
+            </body>
+        </html>
+    );
 }

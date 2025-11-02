@@ -44,36 +44,39 @@ export const svgs = [
 	{
 		name: ["sl-icon"],
 		content: `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.0 24.0" class="sl-icon" id="sl-icon" width="40px" height="40px">
-		<defs>
-		<linearGradient id="grd" x1="0%" y1="0%" x2="100%" y2="100%" spreadMethod="repeat">
-  <stop offset="0%" stop-color="#7a00ff">
-    <animate attributeName="offset" values="-1;1" dur="2.5s" repeatCount="indefinite"/>
-  </stop>
-  <stop offset="33.333%" stop-color="#00a2ff">
-    <animate attributeName="offset" values="-0.666;1.333" dur="2.5s" repeatCount="indefinite"/>
-  </stop>
-  <stop offset="66.666%" stop-color="#3d00ff">
-    <animate attributeName="offset" values="-0.333;1.666" dur="2.5s" repeatCount="indefinite"/>
-  </stop>
-  <stop offset="100%" stop-color="#7a00ff">
-    <animate attributeName="offset" values="0;2" dur="2.5s" repeatCount="indefinite"/>
-  </stop>
-</linearGradient>
-</defs>
-        <g class="border">
-            <path fill="none" stroke-opacity="1.000" fill-rule="nonzero" stroke-width="0.84000003" stroke-linejoin="round" stroke-linecap="square" d="M22.50,6.38L12.00,0.38L1.50,6.37L1.50,17.63L12.00,23.63L22.50,17.63L22.50,6.38z"/>
-        </g>
-        <g class="atom" stroke-width="0.84" stroke-linejoin="round" stroke-linecap="square" fill="none">
-            <path d="M4.97,16.31C3.99,14.72,6.35,11.50,10.24,9.12C14.12,6.74,18.06,6.10,19.03,7.69C20.01,9.28,17.65,12.50,13.76,14.88C9.88,17.26,5.94,17.90,4.97,16.31z"/>
-            <path d="M19.03,16.31C18.06,17.90,14.12,17.26,10.24,14.88C6.35,12.50,3.99,9.28,4.97,7.69C5.94,6.10,9.88,6.74,13.76,9.12C17.65,11.50,20.01,14.72,19.03,16.31z"/>
-            <path d="M12.00,3.75C13.86,3.75,15.38,7.44,15.38,12.00C15.38,16.56,13.86,20.25,12.00,20.25C10.14,20.25,8.63,16.56,8.63,12.00C8.63,7.44,10.14,3.75,12.00,3.75z"/>
-        </g>
-        <g class="code">
-            <path fill="none" stroke-opacity="1.000" fill-rule="nonzero" stroke-width="0.5498102" stroke-linejoin="round" stroke-linecap="round" d="M13.44,11.28Q15.72,11.95,13.41,12.94"/>
-            <path fill="none" stroke-opacity="1.000" fill-rule="nonzero" stroke-width="0.65977263" stroke-linejoin="round" stroke-linecap="round" d="M11.62,13.50L12.37,10.88"/>
-            <path fill="none" stroke-opacity="1.000" fill-rule="nonzero" stroke-width="0.5498102" stroke-linejoin="round" stroke-linecap="round" d="M10.56,11.28Q8.28,11.95,10.59,12.94"/>
-        </g>
-    </svg>`
+    <defs>
+        <linearGradient id="grd" x1="0%" y1="0%" x2="100%" y2="100%" spreadMethod="repeat">
+            <stop offset="0%" stop-color="var(--shine-color-1, #7a00ff)">
+                <animate attributeName="offset" values="-1;1" dur="2.5s" repeatCount="indefinite"/>
+            </stop>
+            <stop offset="33.333%" stop-color="var(--shine-color-2, #00a2ff)">
+                <animate attributeName="offset" values="-0.666;1.333" dur="2.5s" repeatCount="indefinite"/>
+            </stop>
+            <stop offset="66.666%" stop-color="var(--shine-color-3, #3d00ff)">
+                <animate attributeName="offset" values="-0.333;1.666" dur="2.5s" repeatCount="indefinite"/>
+            </stop>
+            <stop offset="100%" stop-color="var(--shine-color-1, #7a00ff)">
+                <animate attributeName="offset" values="0;2" dur="2.5s" repeatCount="indefinite"/>
+            </stop>
+        </linearGradient>
+    </defs>
+    
+    <g class="border">
+        <path fill="none" stroke="var(--border-color, currentColor)" stroke-opacity="1.000" fill-rule="nonzero" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" d="M22.50,6.38L12.00,0.38L1.50,6.37L1.50,17.63L12.00,23.63L22.50,17.63L22.50,6.38z"/>
+    </g>
+    
+    <g class="atom" stroke="var(--atom-color, currentColor)" stroke-width="0.84" stroke-linejoin="round" stroke-linecap="round" fill="none">
+        <path d="M4.97,16.31C3.99,14.72,6.35,11.50,10.24,9.12C14.12,6.74,18.06,6.10,19.03,7.69C20.01,9.28,17.65,12.50,13.76,14.88C9.88,17.26,5.94,17.90,4.97,16.31z"/>
+        <path d="M19.03,16.31C18.06,17.90,14.12,17.26,10.24,14.88C6.35,12.50,3.99,9.28,4.97,7.69C5.94,6.10,9.88,6.74,13.76,9.12C17.65,11.50,20.01,14.72,19.03,16.31z"/>
+        <path d="M12.00,3.75C13.86,3.75,15.38,7.44,15.38,12.00C15.38,16.56,13.86,20.25,12.00,20.25C10.14,20.25,8.63,16.56,8.63,12.00C8.63,7.44,10.14,3.75,12.00,3.75z"/>
+    </g>
+    
+    <g class="code">
+        <path fill="none" stroke="var(--code-color, currentColor)" stroke-opacity="1.000" fill-rule="nonzero" stroke-width="0.5498102" stroke-linejoin="round" stroke-linecap="round" d="M13.44,11.28Q15.72,11.95,13.41,12.94"/>
+        <path fill="none" stroke="var(--code-color, currentColor)" stroke-opacity="1.000" fill-rule="nonzero" stroke-width="0.65977263" stroke-linejoin="round" stroke-linecap="round" d="M11.62,13.50L12.37,10.88"/>
+        <path fill="none" stroke="var(--code-color, currentColor)" stroke-opacity="1.000" fill-rule="nonzero" stroke-width="0.5498102" stroke-linejoin="round" stroke-linecap="round" d="M10.56,11.28Q8.28,11.95,10.59,12.94"/>
+    </g>
+</svg>`
 	},
 	{
 		name: ["discord", "dc"],

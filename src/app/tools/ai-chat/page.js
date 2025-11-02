@@ -495,7 +495,7 @@ export default function AIChatPage() {
       </div>
 
       {/* Input Area */}
-      <div style={ { display: "flex", gap: "0.5rem" }}>
+      <div style={ { display: "flex", gap: "0.5rem", maxHeight: "150px" }}>
         <textarea
           value={inputMessage}
           onChange={(e) => setInputMessage(e.target.value)}
@@ -511,8 +511,8 @@ export default function AIChatPage() {
             borderRadius: "8px",
             color: "var(--text)",
             fontSize: "1rem",
-            resize: "vertical",
-            fontFamily: "inherit"
+            fontFamily: "inherit",
+            overflow: "scroll"
           }}
           />
         <button
