@@ -1,6 +1,10 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import {
+  useState,
+  useRef,
+  useEffect
+} from "react";
 import hljs from 'highlight.js';
 import 'highlight.js/styles/vs2015.css'; // Tema VS Dark
 
@@ -512,7 +516,9 @@ export default function AIChatPage() {
             color: "var(--text)",
             fontSize: "1rem",
             fontFamily: "inherit",
-            overflow: "scroll"
+            resize: "none", // ← La propiedad más importante
+            overflowY: "auto", // ← Mejor que "scroll"
+            maxHeight: "150px" // ← Límite máximo
           }}
           />
         <button
