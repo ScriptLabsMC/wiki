@@ -1,4 +1,4 @@
-import AddonsList from "../components/Utils/AddonsList";
+import AddonsList from "../components/Workers/AddonsList";
 
 export const metadata = {
 	title: "ScriptLabs | Add-ons Page",

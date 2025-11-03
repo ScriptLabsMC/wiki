@@ -16,13 +16,13 @@
     </linearGradient>
   </defs>
 
-  <!-- Hexágono de fondo -->
+  <!-- Hexágono de fondo - Corregido -->
   <g class="border">
-    <path fill="none" stroke="url(#grd)" stroke-opacity="0.3" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"
+    <path fill="none" stroke="url(#grd)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"
       d="M22.00,6.88L12.00,1.38L2.00,6.87L2.00,17.13L12.00,22.63L22.00,17.13L22.00,6.88z" />
   </g>
 
-  <!-- Elipses animadas -->
+  <!-- Elipses animadas - Corregido -->
   <g class="atom" stroke="url(#grd)" stroke-width="0.84" stroke-linejoin="round" stroke-linecap="square" fill="none">
     <path d="M4.97,16.31C3.99,14.72,6.35,11.50,10.24,9.12C14.12,6.74,18.06,6.10,19.03,7.69C20.01,9.28,17.65,12.50,13.76,14.88C9.88,17.26,5.94,17.90,4.97,16.31z">
       <animateTransform
@@ -67,21 +67,21 @@
     </path>
   </g>
 
-  <!-- Código central -->
+  <!-- Código central - Corregido -->
   <g class="code" stroke="url(#grd)" fill="none">
     <path stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"
       d="M13.44,11.28Q15.72,11.95,13.41,12.94">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="1.5s" repeatCount="indefinite" />
     </path>
 
     <path stroke-width="0.66" stroke-linejoin="round" stroke-linecap="round"
       d="M11.62,13.50L12.37,10.88">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="0.3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="1.5s" begin="0.3s" repeatCount="indefinite" />
     </path>
 
     <path stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"
       d="M10.56,11.28Q8.28,11.95,10.59,12.94">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" begin="0.6s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="1.5s" begin="0.6s" repeatCount="indefinite" />
     </path>
   </g>
 </svg>

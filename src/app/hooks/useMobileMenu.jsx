@@ -12,11 +12,17 @@ export function useMobileMenu() {
 
 		if (!nav || !navToggle) return;
 
-		const handleToggle = () => nav.classList.toggle("open");
+		const handleToggle = (e) => {
+			e.stopPropagation(); // ← Esto evita que el click se propague
+			nav.classList.toggle("open");
+		};
+
 		const handleClickOutside = (event) => {
+			// Si el click NO fue en el navToggle Y NO está dentro del nav
 			if (
 				event.target !== navToggle &&
-				!navToggle.contains(event.target)
+				!navToggle.contains(event.target) &&
+				!nav.contains(event.target) // ← Importante: verificar también el nav
 			) {
 				nav.classList.remove("open");
 			}

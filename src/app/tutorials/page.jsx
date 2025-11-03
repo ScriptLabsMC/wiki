@@ -1,4 +1,4 @@
-import TutorialsList from "../components/Utils/TutorialsList";
+import TutorialsList from "../components/Workers/TutorialsList";
 
 export const metadata = {
 	title: "ScriptLabs | Tutorials Page",

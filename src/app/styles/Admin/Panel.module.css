@@ -1,0 +1,308 @@
+/* =========================================
+   ADMIN PANEL STYLES - MEJORADO
+   ========================================= */
+.admin-panel {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-panel .section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.admin-panel .gradient-text {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Login Form Styles */
+.login {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  backdrop-filter: blur(8px) saturate(120%);
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 400px;
+  margin:  25px auto;
+}
+
+.login input.template-path {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 1rem;
+  font-family: "Fira Code", monospace;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.login input.template-path:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(8, 255, 200, 0.1);
+}
+
+.login input.template-path::placeholder {
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+.login .btn-primary {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary);
+  color: var(--bg);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login .btn-primary:hover {
+  background: color-mix(in srgb, var(--primary) 90%, white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(8, 255, 200, 0.3);
+}
+
+/* Admin Panel Form Styles */
+.admin-panel form.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  backdrop-filter: blur(8px) saturate(120%);
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 600px;
+}
+
+.admin-panel fieldset {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 0;
+}
+
+.admin-panel legend {
+  color: var(--primary);
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Form Input Styles */
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(8, 255, 200, 0.1);
+}
+
+.form-input::placeholder {
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+/* Submit Button Styles */
+.admin-panel button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary);
+  color: var(--bg);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.admin-panel button[type="submit"]:hover {
+  background: color-mix(in srgb, var(--primary) 90%, white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(8, 255, 200, 0.3);
+}
+
+/* Form Grid Layout for Team Management */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Status Messages */
+.admin-status {
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.admin-status.success {
+  background: rgba(8, 255, 200, 0.1);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.admin-status.error {
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff6b6b;
+  border: 1px solid #ff6b6b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-panel {
+    margin: 1rem auto;
+    padding: 0 15px;
+  }
+  
+  .admin-panel .gradient-text {
+    font-size: 2rem;
+  }
+  
+  .login,
+  .admin-panel form.card {
+    padding: 1.5rem;
+  }
+  
+  .admin-panel fieldset {
+    padding: 1.5rem;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-panel {
+    padding: 0 10px;
+  }
+  
+  .login,
+  .admin-panel form.card {
+    padding: 1rem;
+  }
+  
+  .admin-panel fieldset {
+    padding: 1rem;
+    border: none;
+  }
+  
+  .admin-panel legend {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+/* =========================================
+   ADMIN TABS STYLES
+   ========================================= */
+.admin-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  padding: 1rem 2rem;
+  color: var(--muted);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  flex: 1;
+  text-align: center;
+}
+
+.tab-btn:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tab-btn.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+/* Danger button styles */
+.btn-danger {
+  background: #ff4444 !important;
+  color: white !important;
+  border: none !important;
+}
+
+.btn-danger:hover {
+  background: #cc3333 !important;
+  transform: translateY(-2px);
+}
+
+/* Members list styles */
+.members-list {
+  max-height: 200px;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.members-list div {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s ease;
+}
+
+.members-list div:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.members-list div:last-child {
+  border-bottom: none;
+}

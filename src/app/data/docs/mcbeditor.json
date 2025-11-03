@@ -1,15 +1,29 @@
 {
-  "slug": "mcbeditor",
-  "title": "MCBEDITOR v1.4.2",
-  "description": "Un editor de scripts JS adaptado con funcionalidades para hacer tu desarrollo de add-ons mucho más fácil.",
-  "icon": "🚀",
-  "category": "Tools",
-  "difficulty": "N/A",
-  "author": "a.j.r._.uribe",
-  "order": 1,
-  "tags": ["tools"],
-  "created": "03-04-2025",
-  "updated": "1-10-2025",
-  "content": "# Herramientas de Desarrollo \n\n **MCBEDITOR** es un editor de codigo adaptado para ayudarte a escribir más fácilmente codigo Javascript para tus addons y mejorar tu productividad.",
-  "resources": []
+    "slug": "mcbeditor",
+    "title": "MCBEDITOR",
+    "description": "Un editor de scripts JS adaptado con funcionalidades para hacer tu desarrollo de add-ons mucho más fácil.",
+    "icon": {
+      "url": "/doc-icons/logo.png",
+      "alt": "Logotipo de MCBEDITOR v2"
+    },
+    "category": "Tools",
+    "difficulty": "N/A",
+    "author": "a.j.r._.uribe",
+    "order": 1,
+    "tags": ["tools"],
+    "created": "03-04-2025",
+    "updated": "02-11-2025",
+    "content": "# Herramientas de Desarrollo \n## Introducción a MCBEDITOR \n**MCBEDITOR** es un editor de código adaptado para ayudarte a escribir más fácilmente código Javascript para tus addons y mejorar tu productividad. Nuestro objetivo es proporcionar una herramienta fácil de usar y personalizable para que puedas centrarte en lo que importa: crear contenido de alta calidad para tus proyectos. \n### Características clave \n* **Edición de código avanzada**: MCBEDITOR ofrece una variedad de características de edición de código, incluyendo resaltado de sintaxis, autocompletado y corrección de errores. \n* **Compatibilidad con addons**: Nuestro editor está diseñado específicamente para trabajar con addons, lo que te permite crear y editar código Javascript de manera eficiente. \n* **Mejora de la productividad**: Con MCBEDITOR, puedes trabajar de manera más eficiente y efectiva, gracias a nuestras características de edición de código y herramientas de productividad. \n### Beneficios de usar MCBEDITOR \n* **Ahorro de tiempo**: Nuestro editor te permite trabajar de manera más rápida y eficiente, lo que te permite centrarte en otros aspectos de tu proyecto. \n* **Mejora de la calidad del código**: Con nuestras características de edición de código avanzadas, puedes crear código Javascript de alta calidad y sin errores. \n* **Personalización**: MCBEDITOR es altamente personalizable, lo que te permite adaptarlo a tus necesidades y preferencias. \n## ¿Qué sigue? \n¡Estamos emocionados de que estés considerando usar MCBEDITOR para tus proyectos! Si tienes alguna pregunta o necesitas ayuda para empezar, no dudes en hacérnoslo saber. Estamos aquí para ayudarte a aprovechar al máximo nuestras herramientas y características.",
+    "resources": [
+        {
+            "title": "MCBEditor v1.4",
+            "url": "https://mcbeditor.vercel.app",
+            "description": "Version 1.4 del editor, (descontinuado, no recibirá más uodates)"
+        },
+        {
+            "title": "MCBEditor v2",
+            "url": "https://mcbeditor-v2.vercel.app",
+            "description": "Version 2 (y definitiva) del editor. (Recomendado)"
+        }
+    ]
 }

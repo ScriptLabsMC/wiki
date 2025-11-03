@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ajr-uribe",
+    "name": "a.j.r._.uribe",
+    "role": "Script API",
+    "avatar": "/media/avatar_ajr.png",
+    "bio": "Desarrollador de addons, templates, scripts y herramientas de desarrollo de addons para bedrock.",
+    "badges": [
+      "Leader"
+    ]
+  },
+  {
+    "id": "spider",
+    "name": "🕸️Spider🕸️",
+    "role": "JSON • Modelos 3D",
+    "avatar": "/media/avatar_isma.png",
+    "bio": "Helper de JSON y modelado 3D, aprendiendo constantemente",
+    "badges": [
+      "Helper"
+    ]
+  },
+  {
+    "id": "elpintas",
+    "name": "✦ ElPintas ✦ 🎨",
+    "role": "JSON • Modelos 3D • Arte",
+    "avatar": "/media/elpintas.jpg",
+    "bio": "Helper de JSON y modelado 3D, principiante, aprendiendo constantemente",
+    "badges": [
+        "Helper"
+      ]
+  }
+]

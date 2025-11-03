@@ -19,7 +19,7 @@ export async function generateMetadata({ params }) {
 		openGraph: {
 			title: addon.name,
 			description: addon.summary || "Add-on para Minecraft Bedrock",
-			images: [addon.logo?.url || "public/favicon.ico"]
+			images: [addon.logo?.url || "/favicon.ico"]
 		}
 	};
 }
