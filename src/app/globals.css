@@ -12,21 +12,30 @@
   --accent2: #7a00ff;
   --radius: 16px;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  --sl-grd: linear-gradient(135deg,
-      var(--accent1),
-      var(--accent2) 50%,
-      var(--primary));
-  
-  --hero-gradient: radial-gradient(1200px 600px at 20% 10%,
+  --sl-grd: linear-gradient(
+    135deg,
+    var(--accent1),
+    var(--accent2) 50%,
+    var(--primary)
+  );
+
+  --hero-gradient:
+    radial-gradient(
+      1200px 600px at 20% 10%,
       rgba(0, 162, 255, 0.2),
-      transparent 60%),
-    radial-gradient(1000px 600px at 80% 20%,
+      transparent 60%
+    ),
+    radial-gradient(
+      1000px 600px at 80% 20%,
       rgba(122, 0, 255, 0.18),
-      transparent 60%),
-    radial-gradient(800px 500px at 50% 80%,
+      transparent 60%
+    ),
+    radial-gradient(
+      800px 500px at 50% 80%,
       rgba(8, 255, 200, 0.16),
-      transparent 60%);
-  
+      transparent 60%
+    );
+
   /* Variables para el logo*/
   --border-color: var(--primary);
   --atom-color: var(--accent1);
@@ -35,7 +44,6 @@
   --shine-color-2: var(--accent1);
   --shine-color-3: var(--primary);
 }
-
 
 /* =========================================
    RESET Y BASE
@@ -67,11 +75,10 @@ body {
   line-height: 1.6;
 }
 
-
 /* =========================================
                   ADMIN
 ========================================= */
-@import url('./styles/Admin/Panel.module.css');
+@import url("./styles/Admin/Panel.module.css");
 
 /* =========================================
    BACKDROP ANIMADO
@@ -89,11 +96,11 @@ body {
   0% {
     transform: translateY(0px) scale(1);
   }
-  
+
   50% {
     transform: translateY(-20px) scale(1.02);
   }
-  
+
   100% {
     transform: translateY(10px) scale(0.98);
   }
@@ -140,7 +147,7 @@ body {
 .template-description {
   font-size: 1.3rem;
   color: var(--muted);
-  margin: .3rem auto;
+  margin: 0.3rem auto;
   max-width: 800px;
   line-height: 1.6;
 }
@@ -505,7 +512,7 @@ body {
     opacity: 0;
     transform: translateY(10px);
   }
-  
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1028,12 +1035,11 @@ body {
   padding: 0;
 }
 
-
 /* =========================================
    Team
    ========================================= */
-   @import url('./styles/Team/Team.module.css');
-   
+@import url("./styles/Team/Team.module.css");
+
 /* =========================================
    VIDEOS
    ========================================= */
@@ -1108,9 +1114,11 @@ body {
   justify-content: space-between;
   padding: 14px 20px;
   backdrop-filter: saturate(130%) blur(8px);
-  background: linear-gradient(180deg,
-      rgba(11, 15, 20, 0.9),
-      rgba(11, 15, 20, 0.65));
+  background: linear-gradient(
+    180deg,
+    rgba(11, 15, 20, 0.9),
+    rgba(11, 15, 20, 0.65)
+  );
   border-bottom: 1px solid var(--border);
 }
 
@@ -1159,12 +1167,15 @@ body {
    ========================================= */
 .hero {
   display: flex;
-  padding: 0 15px;
+  padding: 0 20px;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  margin: 20px 15px 10px 15px;
+  margin: 20px auto 10px auto;
+  max-width: 1200px;
+  width: 100%; /* Asegura que ocupe el ancho completo */
+  box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
 }
 
 .hero-content h1 {
@@ -1176,6 +1187,16 @@ body {
   .hero-content h1 {
     font-size: 2rem;
     line-height: 1.15;
+  }
+
+  .section,
+  .hero.section {
+    padding: 0 20px 20px 20px; /* Padding consistente */
+  }
+
+  .hero {
+    padding: 0 20px; /* Añade padding específico para hero en móvil */
+    margin: 15px auto; /* Ajusta el margen */
   }
 }
 
@@ -1275,10 +1296,12 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg,
-      var(--accent1),
-      var(--accent2) 50%,
-      var(--primary));
+  background: linear-gradient(
+    135deg,
+    var(--accent1),
+    var(--accent2) 50%,
+    var(--primary)
+  );
   color: white;
   border: 0;
   box-shadow: 0 8px 24px rgba(0, 162, 255, 0.25);
@@ -1492,12 +1515,12 @@ body {
     transform: scale(0.85);
     opacity: 0.85;
   }
-  
+
   50% {
     transform: scale(1);
     opacity: 1;
   }
-  
+
   100% {
     transform: scale(0.85);
     opacity: 0.85;
@@ -1520,7 +1543,7 @@ body {
   0% {
     transform: rotate(0deg);
   }
-  
+
   100% {
     transform: rotate(360deg);
   }
@@ -1625,7 +1648,7 @@ body {
   from {
     opacity: 0;
   }
-  
+
   to {
     opacity: 1;
   }
@@ -1646,15 +1669,15 @@ body {
     display: none;
     flex-direction: column;
   }
-  
+
   .nav.open {
     display: flex;
   }
-  
+
   .nav-toggle {
     display: block;
   }
-  
+
   .grid-3,
   .grid-2 {
     grid-template-columns: 1fr;
@@ -1662,66 +1685,65 @@ body {
 }
 
 @media (max-width: 600px) {
-
   .section,
   .hero.section {
     padding: 0 30px 20px 30px;
   }
-  
+
   .section-title {
     font-size: 22px;
   }
-  
+
   .btn,
   button {
     padding: 8px 10px;
     font-size: 1rem;
   }
-  
+
   .grid-3,
   .grid-2 {
     grid-template-columns: 1fr;
   }
-  
+
   .template-meta-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .template-content-section {
     padding: 1.5rem;
   }
-  
+
   .markdown-h1 {
     font-size: 2rem;
   }
-  
+
   .footer-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .addon-hero {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .addon-logo {
     align-self: center;
   }
-  
+
   .addon-stats {
     justify-content: center;
   }
-  
+
   .addon-tabs {
     flex-direction: column;
   }
-  
+
   .file-card {
     flex-direction: column;
     gap: 1rem;
     text-align: center;
   }
-  
+
   .file-meta {
     justify-content: center;
   }
@@ -1738,10 +1760,12 @@ body {
    UTILIDADES FINALES
    ========================================= */
 .gradient-text {
-  background: linear-gradient(90deg,
-      var(--accent1),
-      var(--accent2),
-      var(--primary));
+  background: linear-gradient(
+    90deg,
+    var(--accent1),
+    var(--accent2),
+    var(--primary)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
